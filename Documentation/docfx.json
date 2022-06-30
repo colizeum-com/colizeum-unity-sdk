@@ -1,0 +1,88 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "..",
+          "files": [
+            "Assets/**/*.cs"
+          ],
+          "exclude": [
+            "Assets/Plugins/**"
+          ]
+        }
+      ],
+      "globalNamespaceId": "Global",
+      "filter": "filterConfig.yml",
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "globalMetadata": {
+      "_appTitle": "ColizeumSDK Documentation",
+      "_appFooter": "ColizeumSDK Documentation",
+      "_enableSearch": true,
+      "_appLogoPath": "logo.svg"
+    },
+    "content": [
+      {
+        "files": [
+          "toc.yml",
+          "index.md"
+        ]
+      },
+      {
+        "src": "api",
+        "files": [
+          "*.yml"
+        ],
+        "dest": "api"
+      },
+      {
+        "src": "manual",
+        "files": [
+          "toc.yml",
+          "*.md"
+        ],
+        "dest": "manual"
+      }
+    ],
+    "overwrite": [
+      {
+        "src": "..",
+        "files": [
+          "Assets/Scripts/**/*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "resources/**/*",
+          "logo.svg",
+          "favicon.png"
+        ]
+      }
+    ],
+    "sitemap": {
+      "baseUrl": "https://docs.colizeum.com/unity",
+      "changefreq": "weekly",
+      "fileOptions": {
+        "api/*": {
+          "changefreq": "daily"
+        }
+      }
+    },
+    "xref": [
+      "https://docs.colizeum.com/unity/xrefmap.yml"
+    ],
+    "xrefService": [
+      "https://xref.docs.microsoft.com/query?uid={uid}"
+    ],
+    "template": [
+      "default",
+      "templates/unity"
+    ],
+    "dest": "../public"
+  }
+}

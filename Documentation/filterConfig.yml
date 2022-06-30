@@ -1,0 +1,11 @@
+apiRules:
+  - include:
+      uidRegex: ^ColizeumSDK
+      type: Namespace
+      
+  - exclude:
+      uidRegex: ^ColizeumSDK\.Examples
+      type: Namespace
+  - exclude:
+      uidRegex: .*
+      type: Namespace
