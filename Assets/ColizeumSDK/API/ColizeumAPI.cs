@@ -116,7 +116,7 @@ namespace ColizeumSDK.API
         private void OnError<T>(Exception exception, ApiRequest request, Action<T> onSuccess = null,
             Action<Exception> onError = null)
         {
-            if (_wasRefreshed || !(exception is InvalidTokenException))
+            if (_wasRefreshed || (!(exception is InvalidTokenException) && !(exception is UnauthorizedException)))
             {
                 if (_wasRefreshed)
                 {
