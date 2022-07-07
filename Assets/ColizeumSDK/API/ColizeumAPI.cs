@@ -29,6 +29,7 @@ namespace ColizeumSDK.API
     public partial class ColizeumAPI : MonoBehaviour
     {
         private readonly List<UnityWebRequest> _requests = new List<UnityWebRequest>();
+        private bool _wasRefreshed;
 
         /// <summary>
         /// Stops all currently active API requests
@@ -115,8 +116,13 @@ namespace ColizeumSDK.API
         private void OnError<T>(Exception exception, ApiRequest request, Action<T> onSuccess = null,
             Action<Exception> onError = null)
         {
-            if (!(exception is InvalidTokenException))
+            if (_wasRefreshed || !(exception is InvalidTokenException))
             {
+                if (_wasRefreshed)
+                {
+                    Debug.LogWarning("Access Token was already refreshed. Stopping");
+                }
+
                 Debug.LogError(exception);
 
                 onError?.Invoke(exception);
@@ -125,13 +131,22 @@ namespace ColizeumSDK.API
 
             Debug.LogWarning("Will try to refresh the Access Token");
 
-            Colizeum.Token.Refresh(() => { Request(request, onSuccess, onError); }, refreshException =>
+            Colizeum.Token.Refresh(() =>
+            {
+                _wasRefreshed = true;
+
+                Request<T>(request, (response) =>
+                {
+                    _wasRefreshed = false;
+                    onSuccess?.Invoke(response);
+                }, onError);
+            }, refreshException =>
             {
                 Debug.LogError(exception);
 
                 onError?.Invoke(refreshException);
 
-                Colizeum.Token.OnInvalid.Invoke();
+                Colizeum.Token.OnInvalid?.Invoke();
             });
         }
 
@@ -230,10 +245,7 @@ namespace ColizeumSDK.API
 
         private static Dictionary<string, string> GetDefaultHeaders(ApiRequest request)
         {
-            var dictionary = new Dictionary<string, string>
-            {
-                { "X-Client-Id", ColizeumSettings.Instance.ClientId },
-            };
+            var dictionary = new Dictionary<string, string>();
 
             if (ColizeumSettings.Instance.apiMode == ApiMode.Sandbox)
             {

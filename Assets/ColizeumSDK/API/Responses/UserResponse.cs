@@ -14,16 +14,23 @@ using System;
 
 namespace ColizeumSDK.API.Responses
 {
-    /// <summary>
-    /// 
-    /// </summary>
     [Serializable]
     public class UserResponse
     {
-        public string sub;
-        public string email;
-        public string username;
-        public string avatar;
-        public string created_at;
+        [Serializable]
+        public struct UserItem
+        {
+            public string id;
+            public string email;
+            public string username;
+            public string avatar;
+            public string bio;
+            public string twitter;
+            public string discord;
+            public string telegram;
+            public string created_at;
+        }
+
+        public UserItem item;
     }
 }

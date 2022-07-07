@@ -76,7 +76,7 @@ namespace ColizeumSDK
         /// <summary>
         /// Returns a boolean indicating if the user is logged in
         /// </summary>
-        public static bool IsLoggedIn => Auth != null && Auth.IsLoggedIn;
+        public static bool IsLoggedIn => Auth?.IsLoggedIn == true;
 
         private static Colizeum Create()
         {

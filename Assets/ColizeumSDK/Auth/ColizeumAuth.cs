@@ -130,11 +130,17 @@ namespace ColizeumSDK.Auth
             {
                 Colizeum.User = new User
                 {
-                    id = userResponse.sub,
-                    username = userResponse.username,
-                    email = userResponse.email,
-                    avatar = userResponse.avatar,
-                    createdAt = userResponse.created_at
+                    id = userResponse.item.id,
+                    username = userResponse.item.username,
+                    email = userResponse.item.email,
+                    avatar = userResponse.item.avatar,
+
+                    bio = userResponse.item.bio,
+                    twitter = userResponse.item.twitter,
+                    discord = userResponse.item.discord,
+                    telegram = userResponse.item.telegram,
+
+                    createdAt = userResponse.item.created_at
                 };
 
                 onSuccess.Invoke(Colizeum.User);

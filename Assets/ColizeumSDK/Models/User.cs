@@ -18,9 +18,16 @@ namespace ColizeumSDK.Models
     public class User
     {
         public string id;
+        
         public string email;
         public string username;
+        
         public string avatar;
+        public string bio;
+        public string twitter;
+        public string discord;
+        public string telegram;
+        
         public string createdAt;
     }
 }

@@ -16,7 +16,8 @@ namespace ColizeumSDK.Utils
     {
         public const string Token = Constants.Issuer + "/token";
         public const string RevokeToken = Constants.Issuer + "/token/revocation";
-        public const string UserInfo = Constants.Issuer + "/me";
+        
+        public const string UserInfo = Constants.ApiUrl + "/users/me";
 
         public const string GetEnergy = Constants.ApiUrl + "/funds/energy";
         public const string ConsumeEnergy = Constants.ApiUrl + "/funds/energy/consume";
