@@ -12,6 +12,8 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Text;
 using UnityEngine;
@@ -31,6 +33,8 @@ namespace ColizeumSDK.Auth.Callbacks
         public static Exception Error;
 
         private static HttpListener _listener;
+
+        private static readonly Dictionary<string, string> Cache = new Dictionary<string, string>();
 
         /// <summary>
         /// Starts the HTTP listener and waits for incoming code request
@@ -56,6 +60,9 @@ namespace ColizeumSDK.Auth.Callbacks
             Debug.Log("Started the Loopback listener on port " + Constants.LoopbackPort);
         }
 
+        /// <summary>
+        /// Stops the HTTP listener
+        /// </summary>
         public static void Stop()
         {
             if (_listener == null) return;
@@ -73,11 +80,27 @@ namespace ColizeumSDK.Auth.Callbacks
             var httpContext = httpListener.EndGetContext(result);
             var httpRequest = httpContext.Request;
 
-            var code = httpRequest.QueryString.Get("code");
-            var state = httpRequest.QueryString.Get("state");
+            _listener.BeginGetContext(IncomingHttpRequest, _listener);
+
+            if (httpRequest.Url.PathAndQuery.Contains("."))
+            {
+                HandleFileRequest(httpContext);
+            }
+            else
+            {
+                HandleIndexRequest(httpContext);
+            }
+        }
+
+        private static void HandleIndexRequest(HttpListenerContext context)
+        {
+            var httpRequest = context.Request;
 
             try
             {
+                var code = httpRequest.QueryString.Get("code");
+                var state = httpRequest.QueryString.Get("state");
+
                 if (!string.IsNullOrEmpty(code))
                 {
                     CodeResponse = new CodeResponse
@@ -101,25 +124,49 @@ namespace ColizeumSDK.Auth.Callbacks
             }
             finally
             {
-                var httpResponse = httpContext.Response;
-
-                var response =
-                    "<html><body><div style='text-align:center'><b>DONE!</b><br>You can now switch back to the game</div></body></html>";
-
-                var buffer = Encoding.UTF8.GetBytes(response);
-
-                httpResponse.ContentLength64 = buffer.Length;
-
-                var output = httpResponse.OutputStream;
-
-                output.Write(buffer, 0, buffer.Length);
-                output.Close();
+                Response(context, GetFile("index.html"));
 
                 // the HTTP listener has served it's purpose, shut it down
                 Stop();
 
                 Processed = true;
             }
+        }
+
+        private static void HandleFileRequest(HttpListenerContext context)
+        {
+            try
+            {
+                Response(context, GetFile(context.Request.Url.PathAndQuery.Replace("/", "")));
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+            }
+        }
+
+        private static string GetFile(string path)
+        {
+            if (Cache.ContainsKey(path)) return Cache[path];
+
+            var location = Path.Combine(ColizeumSettings.GetSdkPath(), "Resources", "Loopback", path);
+            var content = File.ReadAllText(location);
+
+            Cache.Add(path, content);
+
+            return Cache[path];
+        }
+
+        private static void Response(HttpListenerContext context, string content)
+        {
+            var buffer = Encoding.UTF8.GetBytes(content);
+
+            context.Response.ContentLength64 = buffer.Length;
+
+            var output = context.Response.OutputStream;
+
+            output.Write(buffer, 0, buffer.Length);
+            output.Close();
         }
 
         public static IEnumerator WaitForResponse(Action<CodeResponse> onSuccess, Action<Exception> onError = null)

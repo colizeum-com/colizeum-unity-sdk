@@ -27,6 +27,7 @@ namespace ColizeumSDK.Settings
         private const string AssetExtension = ".asset";
 
         private static ColizeumSettings _instance;
+        private static string _sdkPath;
 
         private void OnValidate()
         {
@@ -138,7 +139,11 @@ namespace ColizeumSDK.Settings
         {
             get
             {
-                _instance = _instance ? _instance : Resources.Load(AssetName) as ColizeumSettings;
+                if (_instance == null)
+                {
+                    _instance = Resources.Load(AssetName) as ColizeumSettings;
+                    StoreSdkPath();
+                }
 
                 if (_instance != null)
                 {
@@ -153,9 +158,19 @@ namespace ColizeumSDK.Settings
             }
         }
 
-        private static string GetSdkPath()
+        public static string GetSdkPath()
         {
-            return GetAbsoluteSdkPath().Replace("\\", "/").Replace(Application.dataPath, "Assets");
+            if (_sdkPath == null)
+            {
+                StoreSdkPath();
+            }
+
+            return _sdkPath;
+        }
+
+        private static void StoreSdkPath()
+        {
+            _sdkPath = GetAbsoluteSdkPath().Replace("\\", "/").Replace(Application.dataPath, "Assets");
         }
 
         private static string GetAbsoluteSdkPath()
