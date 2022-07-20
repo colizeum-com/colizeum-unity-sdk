@@ -80,22 +80,6 @@ namespace ColizeumSDK.Auth.Callbacks
             var httpContext = httpListener.EndGetContext(result);
             var httpRequest = httpContext.Request;
 
-            _listener.BeginGetContext(IncomingHttpRequest, _listener);
-
-            if (httpRequest.Url.PathAndQuery.Contains("."))
-            {
-                HandleFileRequest(httpContext);
-            }
-            else
-            {
-                HandleIndexRequest(httpContext);
-            }
-        }
-
-        private static void HandleIndexRequest(HttpListenerContext context)
-        {
-            var httpRequest = context.Request;
-
             try
             {
                 var code = httpRequest.QueryString.Get("code");
@@ -124,24 +108,11 @@ namespace ColizeumSDK.Auth.Callbacks
             }
             finally
             {
-                Response(context, GetFile("index.html"));
-
-                // the HTTP listener has served it's purpose, shut it down
-                Stop();
+                Response(httpContext, GetFile("index.html"));
 
                 Processed = true;
-            }
-        }
 
-        private static void HandleFileRequest(HttpListenerContext context)
-        {
-            try
-            {
-                Response(context, GetFile(context.Request.Url.PathAndQuery.Replace("/", "")));
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e);
+                Stop();
             }
         }
 
