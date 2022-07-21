@@ -1,0 +1,32 @@
+{
+  "name": "com.colizeum.colizeum-unity-sdk",
+  "version": "0.2.3",
+  "displayName": "Colizeum SDK",
+  "description": "A library which allows you to integrate Colizeum services into your Unity app/game",
+  "unity": "2018.4",
+  "documentationUrl": "https://github.com/colizeum-com/colizeum-unity-sdk/",
+  "changelogUrl": "https://github.com/colizeum-com/colizeum-unity-sdk/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/colizeum-com/colizeum-unity-sdk/blob/main/LICENCE.txt",
+  "dependencies": {},
+  "keywords": [
+    "blockchain",
+    "authorization",
+    "cryptocurrency",
+    "web3",
+    "nft",
+    "play2earn",
+    "p2e"
+  ],
+  "samples": [
+    {
+      "displayName": "Login Scene",
+      "description": "Login Scene",
+      "path": "Examples/Login"
+    }
+  ],
+  "author": {
+    "name": "Colizeum",
+    "email": "info@colizeum.com",
+    "url": "https://colizeum.com"
+  }
+}
