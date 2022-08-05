@@ -12,30 +12,12 @@
 
 using System;
 
-namespace ColizeumSDK.API.Responses
+namespace ColizeumSDK.Models
 {
     [Serializable]
-    public struct GetEnergyResponse
+    public class Wallet
     {
-        [Serializable]
-        public struct EnergyToken
-        {
-            public string token_id;
-            public int energy;
-            public int max_energy;
-            public string next_energy_at;
-            public int energy_regeneration_amount;
-            public int energy_regeneration_rate;
-        }
-
-        [Serializable]
-        public struct EnergyItem
-        {
-            public int total_energy;
-            public int max_energy;
-            public EnergyToken[] tokens;
-        }
-
-        public EnergyItem item;
+        public string id;
+        public string address;
     }
 }

@@ -11,9 +11,11 @@
  */
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using ColizeumSDK.Factories;
 using UnityEngine;
 using UnityEngine.Networking;
 using Random = System.Random;
@@ -128,20 +130,7 @@ namespace ColizeumSDK.Auth
         {
             Colizeum.API.GetMe(userResponse =>
             {
-                Colizeum.User = new User
-                {
-                    id = userResponse.item.id,
-                    username = userResponse.item.username,
-                    email = userResponse.item.email,
-                    avatar = userResponse.item.avatar,
-
-                    bio = userResponse.item.bio,
-                    twitter = userResponse.item.twitter,
-                    discord = userResponse.item.discord,
-                    telegram = userResponse.item.telegram,
-
-                    createdAt = userResponse.item.created_at
-                };
+                Colizeum.User = UserFactory.Create(userResponse.item);
 
                 onSuccess.Invoke(Colizeum.User);
             }, onError);

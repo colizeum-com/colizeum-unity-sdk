@@ -17,8 +17,8 @@ namespace ColizeumSDK.Utils
     /// </summary>
     public static class Constants
     {
-        public const string ApiUrl = "https://api.colizeum.com";
-        public const string Issuer = "https://identity.colizeum.com";
+        public const string ApiUrl = "http://localhost:3333";
+        public const string Issuer = "http://localhost:3335";
 
         // We want this to be in the range of 49152 to 65535, as those are dynamic ports and usually used temporary 
         public const int LoopbackPort = 50100;

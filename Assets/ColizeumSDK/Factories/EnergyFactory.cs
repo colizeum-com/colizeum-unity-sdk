@@ -10,28 +10,29 @@
  * language governing permissions and limitations under the License.
  */
 
-using System;
 using System.Collections.Generic;
+using System.Linq;
+using ColizeumSDK.API.Responses;
+using ColizeumSDK.Models;
 
-namespace ColizeumSDK.Models
+namespace ColizeumSDK.Factories
 {
-    [Serializable]
-    public class User
+    public static class EnergyFactory
     {
-        public string id;
+        public static Energy Create(GetEnergyResponse.EnergyItem energyItem)
+        {
+            var energy = new Energy
+            {
+                current = energyItem.total_energy,
+                total = energyItem.max_energy,
+            };
 
-        public string email;
-        public string username;
+            if (energyItem.tokens != null)
+            {
+                energy.tokens = new List<Token>(energyItem.tokens.Select(TokenFactory.Create));
+            }
 
-        public string avatar;
-        public string bio;
-        public string twitter;
-        public string discord;
-        public string telegram;
-
-        public string createdAt;
-
-        public Energy energy;
-        public List<Wallet> wallets;
+            return energy;
+        }
     }
 }

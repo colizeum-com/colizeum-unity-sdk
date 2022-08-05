@@ -10,32 +10,20 @@
  * language governing permissions and limitations under the License.
  */
 
-using System;
+using ColizeumSDK.API.Responses;
+using ColizeumSDK.Models;
 
-namespace ColizeumSDK.API.Responses
+namespace ColizeumSDK.Factories
 {
-    [Serializable]
-    public struct GetEnergyResponse
+    public static class WalletFactory
     {
-        [Serializable]
-        public struct EnergyToken
+        public static Wallet Create(UserResponse.UserWallet wallet)
         {
-            public string token_id;
-            public int energy;
-            public int max_energy;
-            public string next_energy_at;
-            public int energy_regeneration_amount;
-            public int energy_regeneration_rate;
+            return new Wallet
+            {
+                id = wallet.id,
+                address = wallet.address
+            };
         }
-
-        [Serializable]
-        public struct EnergyItem
-        {
-            public int total_energy;
-            public int max_energy;
-            public EnergyToken[] tokens;
-        }
-
-        public EnergyItem item;
     }
 }

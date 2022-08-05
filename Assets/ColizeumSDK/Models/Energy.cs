@@ -11,31 +11,16 @@
  */
 
 using System;
+using System.Collections.Generic;
 
-namespace ColizeumSDK.API.Responses
+namespace ColizeumSDK.Models
 {
     [Serializable]
-    public struct GetEnergyResponse
+    public class Energy
     {
-        [Serializable]
-        public struct EnergyToken
-        {
-            public string token_id;
-            public int energy;
-            public int max_energy;
-            public string next_energy_at;
-            public int energy_regeneration_amount;
-            public int energy_regeneration_rate;
-        }
+        public int current;
+        public int total;
 
-        [Serializable]
-        public struct EnergyItem
-        {
-            public int total_energy;
-            public int max_energy;
-            public EnergyToken[] tokens;
-        }
-
-        public EnergyItem item;
+        public List<Token> tokens;
     }
 }

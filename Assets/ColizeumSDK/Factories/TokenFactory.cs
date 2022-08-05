@@ -10,32 +10,24 @@
  * language governing permissions and limitations under the License.
  */
 
-using System;
+using ColizeumSDK.API.Responses;
+using ColizeumSDK.Models;
 
-namespace ColizeumSDK.API.Responses
+namespace ColizeumSDK.Factories
 {
-    [Serializable]
-    public struct GetEnergyResponse
+    public static class TokenFactory
     {
-        [Serializable]
-        public struct EnergyToken
+        public static Token Create(GetEnergyResponse.EnergyToken token)
         {
-            public string token_id;
-            public int energy;
-            public int max_energy;
-            public string next_energy_at;
-            public int energy_regeneration_amount;
-            public int energy_regeneration_rate;
+            return new Token
+            {
+                id = token.token_id,
+                energy = token.energy,
+                maxEnergy = token.max_energy,
+                regenerationAmount = token.energy_regeneration_amount,
+                regenerationRate = token.energy_regeneration_rate,
+                nextEnergyAt = token.next_energy_at
+            };
         }
-
-        [Serializable]
-        public struct EnergyItem
-        {
-            public int total_energy;
-            public int max_energy;
-            public EnergyToken[] tokens;
-        }
-
-        public EnergyItem item;
     }
 }

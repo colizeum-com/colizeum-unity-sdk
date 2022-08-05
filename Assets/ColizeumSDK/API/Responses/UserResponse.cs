@@ -18,6 +18,13 @@ namespace ColizeumSDK.API.Responses
     public class UserResponse
     {
         [Serializable]
+        public struct UserWallet
+        {
+            public string id;
+            public string address;
+        }
+
+        [Serializable]
         public struct UserItem
         {
             public string id;
@@ -29,6 +36,10 @@ namespace ColizeumSDK.API.Responses
             public string discord;
             public string telegram;
             public string created_at;
+
+            public GetEnergyResponse.EnergyItem energy;
+
+            public UserWallet[] wallets;
         }
 
         public UserItem item;
