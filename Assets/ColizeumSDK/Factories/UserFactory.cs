@@ -12,14 +12,15 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using ColizeumSDK.API.Responses;
 using ColizeumSDK.Models;
+
+using static ColizeumSDK.API.Responses.UserResponse;
 
 namespace ColizeumSDK.Factories
 {
     public static class UserFactory
     {
-        public static User Create(UserResponse.UserItem userItem)
+        public static User Create(UserItem userItem)
         {
             var user = new User
             {
@@ -36,6 +37,7 @@ namespace ColizeumSDK.Factories
                 createdAt = userItem.created_at,
 
                 energy = EnergyFactory.Create(userItem.energy),
+                secondaryCurrency = SecondaryCurrencyFactory.Create(userItem.secondaryCurrency)
             };
 
             if (userItem.wallets != null)

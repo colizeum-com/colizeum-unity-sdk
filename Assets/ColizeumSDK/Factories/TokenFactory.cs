@@ -10,14 +10,14 @@
  * language governing permissions and limitations under the License.
  */
 
-using ColizeumSDK.API.Responses;
 using ColizeumSDK.Models;
+using static ColizeumSDK.API.Responses.GetEnergyResponse;
 
 namespace ColizeumSDK.Factories
 {
     public static class TokenFactory
     {
-        public static Token Create(GetEnergyResponse.EnergyToken token)
+        public static Token Create(EnergyToken token)
         {
             return new Token
             {

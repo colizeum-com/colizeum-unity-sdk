@@ -14,6 +14,9 @@ using System;
 
 namespace ColizeumSDK.Models
 {
+    /// <summary>
+    /// Holds information related to a specific user token (NFT) 
+    /// </summary>
     [Serializable]
     public class Token
     {

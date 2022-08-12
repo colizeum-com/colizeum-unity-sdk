@@ -14,7 +14,6 @@ using System.Collections.Generic;
 
 namespace ColizeumSDK.API.Requests
 {
-    using Settings;
     using Utils;
     
     public class ConsumeEnergyRequest : ApiRequest
@@ -25,9 +24,13 @@ namespace ColizeumSDK.API.Requests
 
             SimpleForm = new Dictionary<string, string>
             {
-                { "amount", amount.ToString() },
-                { "token_id", tokenId }
+                { "amount", amount.ToString() }
             };
+
+            if (tokenId != null)
+            {
+                SimpleForm.Add("token_id", tokenId);
+            }
         }
     }
 }

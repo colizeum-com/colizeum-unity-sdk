@@ -10,14 +10,14 @@
  * language governing permissions and limitations under the License.
  */
 
-using ColizeumSDK.API.Responses;
 using ColizeumSDK.Models;
+using static ColizeumSDK.API.Responses.UserResponse;
 
 namespace ColizeumSDK.Factories
 {
     public static class WalletFactory
     {
-        public static Wallet Create(UserResponse.UserWallet wallet)
+        public static Wallet Create(UserWallet wallet)
         {
             return new Wallet
             {

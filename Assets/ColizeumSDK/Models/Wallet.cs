@@ -14,6 +14,9 @@ using System;
 
 namespace ColizeumSDK.Models
 {
+    /// <summary>
+    /// Holds information related to users wallet
+    /// </summary>
     [Serializable]
     public class Wallet
     {

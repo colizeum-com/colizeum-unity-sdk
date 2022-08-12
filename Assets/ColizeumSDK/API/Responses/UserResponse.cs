@@ -11,6 +11,8 @@
  */
 
 using System;
+using static ColizeumSDK.API.Responses.GetEnergyResponse;
+using static ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse;
 
 namespace ColizeumSDK.API.Responses
 {
@@ -37,7 +39,9 @@ namespace ColizeumSDK.API.Responses
             public string telegram;
             public string created_at;
 
-            public GetEnergyResponse.EnergyItem energy;
+            public EnergyItem energy;
+            public SecondaryCurrencyItem secondaryCurrency;
+
 
             public UserWallet[] wallets;
         }

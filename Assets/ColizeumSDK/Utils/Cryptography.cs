@@ -17,7 +17,6 @@ using System.Text;
 
 namespace ColizeumSDK.Utils
 {
-    
     internal static class Cryptography
     {
         private static readonly byte[] Bytes =

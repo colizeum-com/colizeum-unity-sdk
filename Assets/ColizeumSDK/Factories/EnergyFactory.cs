@@ -12,19 +12,20 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using ColizeumSDK.API.Responses;
 using ColizeumSDK.Models;
+
+using static ColizeumSDK.API.Responses.GetEnergyResponse;
 
 namespace ColizeumSDK.Factories
 {
     public static class EnergyFactory
     {
-        public static Energy Create(GetEnergyResponse.EnergyItem energyItem)
+        public static Energy Create(EnergyItem energyItem)
         {
             var energy = new Energy
             {
                 current = energyItem.total_energy,
-                total = energyItem.max_energy,
+                max = energyItem.max_energy,
             };
 
             if (energyItem.tokens != null)
