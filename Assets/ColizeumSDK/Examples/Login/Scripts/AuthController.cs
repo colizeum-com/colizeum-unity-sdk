@@ -26,8 +26,6 @@ namespace ColizeumSDK.Examples.Login.Scripts
                 user.text = $"Hello {response.username}";
                 energy.text = $"Energy: {response.energy.current}";
             });
-            
-            Colizeum.User.energy.Consume(15);
         }
 
         public void Logout()
