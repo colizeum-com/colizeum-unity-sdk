@@ -10,27 +10,23 @@
  * language governing permissions and limitations under the License.
  */
 
-using System.Collections.Generic;
+using System;
 
-namespace ColizeumSDK.API.Requests
+namespace ColizeumSDK.Models
 {
-    using Utils;
-    
-    public class ConsumeEnergyRequest : ApiRequest
+    /// <summary>
+    /// Holds information related to a specific user token (NFT) 
+    /// </summary>
+    [Serializable]
+    public class Token
     {
-        public ConsumeEnergyRequest(int amount, string tokenId = null)
-        {
-            Uri = Endpoints.ConsumeEnergy;
-
-            SimpleForm = new Dictionary<string, string>
-            {
-                { "amount", amount.ToString() }
-            };
-
-            if (tokenId != null)
-            {
-                SimpleForm.Add("token_id", tokenId);
-            }
-        }
+        public string id;
+        
+        public int energy;
+        public int maxEnergy;
+        
+        public string nextEnergyAt;
+        public int regenerationAmount;
+        public int regenerationRate;
     }
 }

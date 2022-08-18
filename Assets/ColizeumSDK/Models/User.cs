@@ -11,23 +11,34 @@
  */
 
 using System;
+using System.Collections.Generic;
 
 namespace ColizeumSDK.Models
 {
+    /// <summary>
+    /// Holds information about the currently logged in Colizeum user
+    /// </summary>
     [Serializable]
     public class User
     {
         public string id;
-        
+
         public string email;
         public string username;
-        
+
         public string avatar;
         public string bio;
         public string twitter;
         public string discord;
         public string telegram;
-        
+
         public string createdAt;
+
+        public Energy energy;
+        public SecondaryCurrency secondaryCurrency;
+
+        public List<Wallet> wallets;
+
+        public bool HasAnyNft => energy.tokens.Count > 0;
     }
 }

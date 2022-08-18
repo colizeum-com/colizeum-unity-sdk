@@ -22,12 +22,17 @@ namespace ColizeumSDK.API.Responses
         {
             public string token_id;
             public int energy;
+            public int max_energy;
+            public string next_energy_at;
+            public int energy_regeneration_amount;
+            public int energy_regeneration_rate;
         }
 
         [Serializable]
         public struct EnergyItem
         {
             public int total_energy;
+            public int max_energy;
             public EnergyToken[] tokens;
         }
 

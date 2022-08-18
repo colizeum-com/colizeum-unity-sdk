@@ -11,12 +11,21 @@
  */
 
 using System;
+using static ColizeumSDK.API.Responses.GetEnergyResponse;
+using static ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse;
 
 namespace ColizeumSDK.API.Responses
 {
     [Serializable]
     public class UserResponse
     {
+        [Serializable]
+        public struct UserWallet
+        {
+            public string id;
+            public string address;
+        }
+
         [Serializable]
         public struct UserItem
         {
@@ -29,6 +38,12 @@ namespace ColizeumSDK.API.Responses
             public string discord;
             public string telegram;
             public string created_at;
+
+            public EnergyItem energy;
+            public SecondaryCurrencyItem secondaryCurrency;
+
+
+            public UserWallet[] wallets;
         }
 
         public UserItem item;

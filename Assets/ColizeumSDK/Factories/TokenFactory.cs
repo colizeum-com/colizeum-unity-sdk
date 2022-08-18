@@ -10,27 +10,24 @@
  * language governing permissions and limitations under the License.
  */
 
-using System.Collections.Generic;
+using ColizeumSDK.Models;
+using static ColizeumSDK.API.Responses.GetEnergyResponse;
 
-namespace ColizeumSDK.API.Requests
+namespace ColizeumSDK.Factories
 {
-    using Utils;
-    
-    public class ConsumeEnergyRequest : ApiRequest
+    public static class TokenFactory
     {
-        public ConsumeEnergyRequest(int amount, string tokenId = null)
+        public static Token Create(EnergyToken token)
         {
-            Uri = Endpoints.ConsumeEnergy;
-
-            SimpleForm = new Dictionary<string, string>
+            return new Token
             {
-                { "amount", amount.ToString() }
+                id = token.token_id,
+                energy = token.energy,
+                maxEnergy = token.max_energy,
+                regenerationAmount = token.energy_regeneration_amount,
+                regenerationRate = token.energy_regeneration_rate,
+                nextEnergyAt = token.next_energy_at
             };
-
-            if (tokenId != null)
-            {
-                SimpleForm.Add("token_id", tokenId);
-            }
         }
     }
 }

@@ -1,9 +1,5 @@
-using System;
-using ColizeumSDK.Auth;
-using ColizeumSDK.Utils;
 using TMPro;
 using UnityEngine;
-using Debug = ColizeumSDK.Utils.Debug;
 
 namespace ColizeumSDK.Examples.Login.Scripts
 {
@@ -19,8 +15,7 @@ namespace ColizeumSDK.Examples.Login.Scripts
             Colizeum.Auth.GetUser(_ =>
             {
                 user.text = $"Hello {Colizeum.User.username}";
-
-                GetEnergy();
+                energy.text = $"Energy: {Colizeum.User.energy.current}";
             });
         }
 
@@ -28,9 +23,8 @@ namespace ColizeumSDK.Examples.Login.Scripts
         {
             Colizeum.Auth.Login(response =>
             {
-                this.user.text = $"Hello {response.username}";
-
-                GetEnergy();
+                user.text = $"Hello {response.username}";
+                energy.text = $"Energy: {response.energy.current}";
             });
         }
 
@@ -39,11 +33,6 @@ namespace ColizeumSDK.Examples.Login.Scripts
             Colizeum.Auth.Logout();
 
             user.text = "Waiting...";
-        }
-
-        private void GetEnergy()
-        {
-            Colizeum.API.GetUserEnergy(response => { energy.text = "Energy: " + response.item.total_energy; });
         }
     }
 }

@@ -11,26 +11,29 @@
  */
 
 using System.Collections.Generic;
+using System.Linq;
+using ColizeumSDK.Models;
 
-namespace ColizeumSDK.API.Requests
+using static ColizeumSDK.API.Responses.GetEnergyResponse;
+
+namespace ColizeumSDK.Factories
 {
-    using Utils;
-    
-    public class ConsumeEnergyRequest : ApiRequest
+    public static class EnergyFactory
     {
-        public ConsumeEnergyRequest(int amount, string tokenId = null)
+        public static Energy Create(EnergyItem energyItem)
         {
-            Uri = Endpoints.ConsumeEnergy;
-
-            SimpleForm = new Dictionary<string, string>
+            var energy = new Energy
             {
-                { "amount", amount.ToString() }
+                current = energyItem.total_energy,
+                max = energyItem.max_energy,
             };
 
-            if (tokenId != null)
+            if (energyItem.tokens != null)
             {
-                SimpleForm.Add("token_id", tokenId);
+                energy.tokens = new List<Token>(energyItem.tokens.Select(TokenFactory.Create));
             }
+
+            return energy;
         }
     }
 }
