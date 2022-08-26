@@ -1,4 +1,4 @@
 - name: Manual
-  href: manual/
+  href: https://arturs-lukjanenoks.gitbook.io/colizeum-unity-sdk/
 - name: Scripting API
   href: api/

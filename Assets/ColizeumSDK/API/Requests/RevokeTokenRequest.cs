@@ -16,7 +16,10 @@ namespace ColizeumSDK.API.Requests
 {
     using Settings;
     using Utils;
-    
+
+    /// <summary>
+    /// Revokes the specified token from the user, making it unusable
+    /// </summary>
     public class RevokeTokenRequest : ApiRequest
     {
         public RevokeTokenRequest(string token)

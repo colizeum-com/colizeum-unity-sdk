@@ -24,7 +24,14 @@ namespace ColizeumSDK.Models
     [Serializable]
     public class Energy
     {
+        /// <summary>
+        /// Currently available energy the User has
+        /// </summary>
         public int current;
+
+        /// <summary>
+        /// Maximum available energy the User has
+        /// </summary>
         public int max;
 
         public List<Token> tokens;

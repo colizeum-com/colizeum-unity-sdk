@@ -14,6 +14,9 @@ namespace ColizeumSDK.API.Requests
 {
     using Utils;
     
+    /// <summary>
+    /// Returns the currently logged in user
+    /// </summary>
     public class GetMeRequest : ApiRequest
     {
         public GetMeRequest()

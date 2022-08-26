@@ -15,9 +15,9 @@ using UnityEngine;
 
 namespace ColizeumSDK.Editor
 {
-    internal class Help : EditorWindow
+    internal class Website : EditorWindow
     {
-        [MenuItem("Colizeum/Help")]
+        [MenuItem("Colizeum/Website")]
         private static void ShowWindow()
         {
             Application.OpenURL("https://colizeum.com");

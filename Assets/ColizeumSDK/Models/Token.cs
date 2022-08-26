@@ -20,13 +20,34 @@ namespace ColizeumSDK.Models
     [Serializable]
     public class Token
     {
+        /// <summary>
+        /// ID of the token
+        /// </summary>
         public string id;
-        
+
+        /// <summary>
+        /// Energy available to the token
+        /// </summary>
         public int energy;
+
+        /// <summary>
+        /// Maximum available energy the token can have
+        /// </summary>
         public int maxEnergy;
-        
+
+        /// <summary>
+        /// Time when the energy will be regenerated
+        /// </summary>
         public string nextEnergyAt;
+
+        /// <summary>
+        /// Amount of energy that will be added on regeneration
+        /// </summary>
         public int regenerationAmount;
+
+        /// <summary>
+        /// How often the energy regeneration happens
+        /// </summary>
         public int regenerationRate;
     }
 }

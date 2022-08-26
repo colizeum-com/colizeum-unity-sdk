@@ -1,0 +1,48 @@
+name: Generate Docs
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - Assets/**
+      - Documentation/**
+      - .github/workflows/docs.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - Documentation/**
+      - .github/workflows/docs.yml
+  workflow_dispatch:
+
+jobs:
+  generate-docs:
+
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET 6.0
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Setup DocFX
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: install docfx
+
+      - name: DocFX Build
+        working-directory: docs
+        run: docfx .\Documentation\docfx.json
+        continue-on-error: false
+
+      - name: Publish
+        if: github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.DOCS_TOKEN }}
+          publish_dir: Documentation/_site
+          force_orphan: true

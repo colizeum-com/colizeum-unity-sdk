@@ -17,6 +17,9 @@ namespace ColizeumSDK.API.Requests
     using Settings;
     using Utils;
     
+    /// <summary>
+    /// Used to retrieve a new access token, using a refresh token
+    /// </summary>
     public class RefreshAccessTokenRequest : ApiRequest
     {
         public RefreshAccessTokenRequest(string refreshToken)

@@ -14,6 +14,9 @@ using ColizeumSDK.Utils;
 
 namespace ColizeumSDK.API.Requests
 {
+    /// <summary>
+    /// Returns information about the available secondary currency the user has
+    /// </summary>
     public class GetSecondaryCurrencyRequest: ApiRequest
     {
         public GetSecondaryCurrencyRequest()

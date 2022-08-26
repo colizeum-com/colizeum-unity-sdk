@@ -8,6 +8,9 @@ namespace ColizeumSDK.Models
     [Serializable]
     public class SecondaryCurrency
     {
+        /// <summary>
+        /// Total amount of Secondary Currency the User has
+        /// </summary>
         public float total;
 
         /// <summary>

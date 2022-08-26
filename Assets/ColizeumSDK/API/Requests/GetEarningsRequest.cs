@@ -14,6 +14,9 @@ using ColizeumSDK.Utils;
 
 namespace ColizeumSDK.API.Requests
 {
+    /// <summary>
+    /// Returns secondary currency earnings made in this specific app/game
+    /// </summary>
     public class GetEarningsRequest : ApiRequest
     {
         public GetEarningsRequest()

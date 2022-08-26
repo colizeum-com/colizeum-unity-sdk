@@ -8,7 +8,8 @@
             "Assets/**/*.cs"
           ],
           "exclude": [
-            "Assets/Plugins/**"
+            "Assets/Plugins/**",
+            "Assets/ColizeumSDK/Examples/**"
           ]
         }
       ],
@@ -19,8 +20,8 @@
   ],
   "build": {
     "globalMetadata": {
-      "_appTitle": "ColizeumSDK Documentation",
-      "_appFooter": "ColizeumSDK Documentation",
+      "_appTitle": "Colizeum Unity SDK API Reference",
+      "_appFooter": "Colizeum Unity SDK API Reference",
       "_enableSearch": true,
       "_appLogoPath": "logo.svg"
     },

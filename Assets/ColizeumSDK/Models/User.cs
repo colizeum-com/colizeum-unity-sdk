@@ -33,12 +33,18 @@ namespace ColizeumSDK.Models
         public string telegram;
 
         public string createdAt;
-
+        
         public Energy energy;
         public SecondaryCurrency secondaryCurrency;
 
+        /// <summary>
+        /// List of user Wallet models
+        /// </summary>
         public List<Wallet> wallets;
 
+        /// <summary>
+        /// Boolean which indicates if the user has any NFTs (Tokens)
+        /// </summary>
         public bool HasAnyNft => energy.tokens.Count > 0;
     }
 }

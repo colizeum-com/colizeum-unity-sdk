@@ -20,7 +20,7 @@ namespace ColizeumSDK.Editor
         [MenuItem("Colizeum/Documentation")]
         private static void ShowWindow()
         {
-            Application.OpenURL("https://colizeum.com");
+            Application.OpenURL("https://colizeum.gitbook.io/colizeum-unity-sdk/");
         }
     }
 }

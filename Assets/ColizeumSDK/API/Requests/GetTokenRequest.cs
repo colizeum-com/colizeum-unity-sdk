@@ -17,6 +17,9 @@ namespace ColizeumSDK.API.Requests
     using Settings;
     using Utils;
 
+    /// <summary>
+    /// Used to exchange authorization code for an access token
+    /// </summary>
     public class GetTokenRequest : ApiRequest
     {
         public GetTokenRequest(string code, string codeVerifier)

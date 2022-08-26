@@ -14,6 +14,9 @@ using System;
 
 namespace ColizeumSDK.API.Responses
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Serializable]
     public class ConsumeEnergyResponse
     {

@@ -30,6 +30,9 @@ namespace ColizeumSDK.Auth
     using Settings;
     using Utils;
 
+    /// <summary>
+    /// Colizeum Authorization module which allows to integrate "Login with Colizeum" functionality easily
+    /// </summary>
     public class ColizeumAuth : MonoBehaviour
     {
         private string _state;
@@ -134,6 +137,11 @@ namespace ColizeumSDK.Auth
 
                 onSuccess.Invoke(Colizeum.User);
             }, onError);
+        }
+
+        public void GetTokensFromCode(string code, Action<TokenResponse> onSuccess, Action<Exception> onError = null)
+        {
+            
         }
 
         private void WaitForDeepLink()

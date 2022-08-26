@@ -16,6 +16,9 @@ namespace ColizeumSDK.API.Requests
 {
     using Utils;
     
+    /// <summary>
+    /// A request which will consume the specified amount of energy for the current User 
+    /// </summary>
     public class ConsumeEnergyRequest : ApiRequest
     {
         public ConsumeEnergyRequest(int amount, string tokenId = null)

@@ -14,6 +14,9 @@ namespace ColizeumSDK.API.Requests
 {
     using Utils;
     
+    /// <summary>
+    /// Returns energy information used to build the Energy model
+    /// </summary>
     public class GetEnergyRequest : ApiRequest
     {
         public GetEnergyRequest()
