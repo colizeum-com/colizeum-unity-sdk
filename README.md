@@ -32,6 +32,8 @@ This library allows you to integrate Colizeum services into your Unity app/game.
 - Open the test scene in `ColizeumSDK/Examples/Login/Scenes/LoginScene.unity`
 - Press play
 
+Checkout our [Documentation](https://colizeum.gitbook.io/colizeum-unity-sdk/) to learn how it all works
+
 ## Licence
 
 See the [LICENCE](./LICENCE.txt) file 
@@ -39,3 +41,5 @@ See the [LICENCE](./LICENCE.txt) file
 ## Additional resources
 
 - [Colizeum Website](https://colizeum.com)
+- [Documentation](https://colizeum.gitbook.io/colizeum-unity-sdk/)
+- [API Reference](https://colizeum-com.github.io/colizeum-unity-sdk/api/ColizeumSDK.html)
