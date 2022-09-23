@@ -54,5 +54,15 @@ namespace ColizeumSDK.Utils
         /// A PlayerPrefs key under which the encrypted ID Token will be stored
         /// </summary>
         public const string IdTokenPref = "ColizemIdToken";
+        
+        /// <summary>
+        /// A PlayerPrefs key under which the access token expiration time will be stored
+        /// </summary>
+        public const string AccessTokenExpiresAtPref = "ColizemAccessTokenExpiresAt";
+        
+        /// <summary>
+        /// A PlayerPrefs key under which the refresh token expiration time will be stored
+        /// </summary>
+        public const string RefreshTokenExpiresAtPref = "ColizemRefreshTokenExpiresAt";
     }
 }

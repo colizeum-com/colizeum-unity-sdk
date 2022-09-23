@@ -26,7 +26,7 @@ namespace ColizeumSDK.Auth
         /// An event which is called when the SDK fails to get a new access token, which usually means that the refresh token has expired
         /// </summary>
         public Action OnInvalid;
-        
+
         /// <summary>
         /// Access Token which is used to access data on behalf of the Colizeum user
         /// </summary>
@@ -42,13 +42,51 @@ namespace ColizeumSDK.Auth
         /// </summary>
         public string IDToken { get; private set; }
 
+        /// <summary>
+        /// UNIX timestamp which represents when the access token will be invalid
+        /// </summary>
+        public int AccessTokenExpiresAt { get; private set; }
+
+        /// <summary>
+        /// UNIX timestamp which represents when the refresh token will be invalid
+        /// </summary>
+        public int RefreshTokenExpiresAt { get; private set; }
+        
         private void Awake()
         {
             SetValues();
         }
 
         /// <summary>
-        /// Returns a boolean indicating if there exists an active token instance
+        /// Returns a boolean indicating if the access token exists and it's valid
+        /// </summary>
+        /// <returns>Boolean</returns>
+        public bool IsValid()
+        {
+            if (AccessToken == null)
+            {
+                return false;
+            }
+
+            return Time.Unix() < AccessTokenExpiresAt;
+        }
+
+        /// <summary>
+        /// Returns a boolean indicating if the access token can be refreshed (assuming it's not revoked server-side) 
+        /// </summary>
+        /// <returns></returns>
+        public bool CanBeRefreshed()
+        {
+            if (RefreshToken == null)
+            {
+                return false;
+            }
+            
+            return Time.Unix() < RefreshTokenExpiresAt;
+        }
+
+        /// <summary>
+        /// Returns a boolean indicating if the access token exists
         /// </summary>
         /// <returns>Boolean</returns>
         public bool Exists()
@@ -63,7 +101,7 @@ namespace ColizeumSDK.Auth
         /// <param name="refreshToken"></param>
         /// <param name="idToken"></param>
         /// <returns></returns>
-        public void Create(string accessToken, string refreshToken, string idToken)
+        public void Create(string accessToken, string refreshToken, string idToken, int expiresIn)
         {
             PlayerPrefs.SetString(Constants.AccessTokenPref,
                 !string.IsNullOrEmpty(refreshToken) ? Cryptography.Encrypt(accessToken) : "");
@@ -71,6 +109,13 @@ namespace ColizeumSDK.Auth
                 !string.IsNullOrEmpty(refreshToken) ? Cryptography.Encrypt(refreshToken) : "");
             PlayerPrefs.SetString(Constants.IdTokenPref,
                 !string.IsNullOrEmpty(refreshToken) ? Cryptography.Encrypt(idToken) : "");
+
+            var currentTime = Time.Unix();
+
+            PlayerPrefs.SetInt(Constants.AccessTokenExpiresAtPref, currentTime + expiresIn);
+
+            // 14 days in seconds
+            PlayerPrefs.SetInt(Constants.RefreshTokenExpiresAtPref, currentTime + 1209600);
 
             SetValues();
         }
@@ -83,6 +128,9 @@ namespace ColizeumSDK.Auth
             PlayerPrefs.DeleteKey(Constants.AccessTokenPref);
             PlayerPrefs.DeleteKey(Constants.RefreshTokenPref);
             PlayerPrefs.DeleteKey(Constants.IdTokenPref);
+
+            PlayerPrefs.DeleteKey(Constants.AccessTokenExpiresAtPref);
+            PlayerPrefs.DeleteKey(Constants.RefreshTokenExpiresAtPref);
 
             SetValues();
         }
@@ -105,7 +153,7 @@ namespace ColizeumSDK.Auth
 
             Colizeum.API.RefreshAccessToken(RefreshToken, (response) =>
             {
-                Create(response.access_token, response.refresh_token, response.id_token);
+                Create(response.access_token, response.refresh_token, response.id_token, response.expires_in);
 
                 onSuccess.Invoke();
             }, onError);
@@ -116,10 +164,15 @@ namespace ColizeumSDK.Auth
             var accessToken = PlayerPrefs.GetString(Constants.AccessTokenPref, null);
             var refreshToken = PlayerPrefs.GetString(Constants.RefreshTokenPref, null);
             var idToken = PlayerPrefs.GetString(Constants.IdTokenPref, null);
+            var accessTokenExpiresAt = PlayerPrefs.GetInt(Constants.AccessTokenExpiresAtPref, 0);
+            var refreshTokenExpiresAt = PlayerPrefs.GetInt(Constants.RefreshTokenExpiresAtPref, 0);
 
             AccessToken = !string.IsNullOrEmpty(accessToken) ? Cryptography.Decrypt(accessToken) : null;
             RefreshToken = !string.IsNullOrEmpty(refreshToken) ? Cryptography.Decrypt(refreshToken) : null;
             IDToken = !string.IsNullOrEmpty(idToken) ? Cryptography.Decrypt(idToken) : null;
+            
+            AccessTokenExpiresAt = accessTokenExpiresAt;
+            RefreshTokenExpiresAt = refreshTokenExpiresAt;
         }
     }
 }

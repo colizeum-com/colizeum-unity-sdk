@@ -52,7 +52,7 @@ namespace ColizeumSDK.Auth
         /// <summary>
         /// Returns a boolean indicating if the user is logged in
         /// </summary>
-        public bool IsLoggedIn => Colizeum.Token.Exists();
+        public bool IsLoggedIn => Colizeum.Token.IsValid() || Colizeum.Token.CanBeRefreshed();
 
         /// <summary>
         /// Returns the authorization url with the code challenge and state
@@ -174,7 +174,7 @@ namespace ColizeumSDK.Auth
 
         private void OnTokensReceived(TokenResponse response)
         {
-            Colizeum.Token.Create(response.access_token, response.refresh_token, response.id_token);
+            Colizeum.Token.Create(response.access_token, response.refresh_token, response.id_token, response.expires_in);
 
             GetUser(user => { _onSuccess.Invoke(user); });
         }
