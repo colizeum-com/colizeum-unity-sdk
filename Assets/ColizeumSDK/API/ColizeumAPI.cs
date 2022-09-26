@@ -147,6 +147,7 @@ namespace ColizeumSDK.API
                 onError?.Invoke(refreshException);
 
                 Colizeum.Token.OnInvalid?.Invoke();
+                Colizeum.Token.Destroy();
             });
         }
 
