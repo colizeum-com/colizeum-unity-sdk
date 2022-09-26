@@ -1,0 +1,332 @@
+{
+  "api/ColizeumSDK.API.ApiRequest.html": {
+    "href": "api/ColizeumSDK.API.ApiRequest.html",
+    "title": "Class ApiRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class ApiRequest A helper class which is used to create a new API request Inheritance Object ApiRequest ConsumeEnergyRequest GetEarningsRequest GetEnergyRequest GetMeRequest GetSecondaryCurrencyRequest GetTokenRequest RefreshAccessTokenRequest RevokeTokenRequest Namespace : ColizeumSDK.API Assembly : cs.temp.dll.dll Syntax public class ApiRequest Fields UseAuthorization Defines if the API request should automatically attach the \"Authorization\" header Declaration public bool UseAuthorization Field Value Type Description Boolean Properties Body Data to send to the API using generic object which will be serialized Declaration public object Body { get; set; } Property Value Type Description Object FormData Data to send to the API using a WWWForm Declaration public WWWForm FormData { get; set; } Property Value Type Description WWWForm Headers The HTTP headers added manually to send with the request Declaration public Dictionary<string, string> Headers { get; set; } Property Value Type Description Dictionary < String , String > Method Defines the HTTP method, either GET, HEAD, POST, PUT, DELETE Declaration public string Method { get; set; } Property Value Type Description String Params The HTTP query string params to send with the request Declaration public Dictionary<string, string> Params { get; set; } Property Value Type Description Dictionary < String , String > SimpleForm Data to send to the API using a Dictionary Declaration public Dictionary<string, string> SimpleForm { get; set; } Property Value Type Description Dictionary < String , String > Uri API Uri to which the request will be sent Declaration public string Uri { get; set; } Property Value Type Description String"
+  },
+  "api/ColizeumSDK.API.ColizeumAPI.html": {
+    "href": "api/ColizeumSDK.API.ColizeumAPI.html",
+    "title": "Class ColizeumAPI | Colizeum Unity SDK API Reference",
+    "keywords": "Class ColizeumAPI Inheritance Object ColizeumAPI Namespace : ColizeumSDK.API Assembly : cs.temp.dll.dll Syntax public class ColizeumAPI : MonoBehaviour Methods ConsumeUserEnergy(Int32, String, Action<ConsumeEnergyResponse>, Action<Exception>) Consumes the specified amount of energy. If tokenId is provided, tries to consume energy for that specific token Declaration public void ConsumeUserEnergy(int amount, string tokenId, Action<ConsumeEnergyResponse> onSuccess, Action<Exception> onError = null) Parameters Type Name Description Int32 amount String tokenId Action < ConsumeEnergyResponse > onSuccess Action < Exception > onError GetEarnings(Action<GetEarningsResponse>, Action<Exception>) Returns secondary earnings for this specific game Declaration public void GetEarnings(Action<GetEarningsResponse> onSuccess, Action<Exception> onError = null) Parameters Type Name Description Action < GetEarningsResponse > onSuccess Action < Exception > onError GetMe(Action<UserResponse>, Action<Exception>) Returns user information Declaration public void GetMe(Action<UserResponse> onSuccess, Action<Exception> onError = null) Parameters Type Name Description Action < UserResponse > onSuccess Action < Exception > onError GetSecondaryCurrency(Action<GetSecondaryCurrencyResponse>, Action<Exception>) Returns currently available secondary currency the user has in Colizeum platform Declaration public void GetSecondaryCurrency(Action<GetSecondaryCurrencyResponse> onSuccess, Action<Exception> onError = null) Parameters Type Name Description Action < GetSecondaryCurrencyResponse > onSuccess Action < Exception > onError GetTokensFromCode(String, String, Action<TokenResponse>, Action<Exception>) Returns user tokens from the provided authorization code Declaration public void GetTokensFromCode(string code, string codeVerifier, Action<TokenResponse> onSuccess, Action<Exception> onError = null) Parameters Type Name Description String code String codeVerifier Action < TokenResponse > onSuccess Action < Exception > onError GetUserEnergy(Action<GetEnergyResponse>, Action<Exception>) Returns available energy amount which user has Declaration public void GetUserEnergy(Action<GetEnergyResponse> onSuccess, Action<Exception> onError = null) Parameters Type Name Description Action < GetEnergyResponse > onSuccess Action < Exception > onError RefreshAccessToken(String, Action<TokenResponse>, Action<Exception>) Tries to fetch a new access token using the existing refresh token Declaration public void RefreshAccessToken(string refreshToken, Action<TokenResponse> onSuccess, Action<Exception> onError = null) Parameters Type Name Description String refreshToken Action < TokenResponse > onSuccess Action < Exception > onError RevokeToken(String, Action<GenericResponse>, Action<Exception>) Revokes provided token, making it unusable Declaration public void RevokeToken(string token, Action<GenericResponse> onSuccess = null, Action<Exception> onError = null) Parameters Type Name Description String token Action < GenericResponse > onSuccess Action < Exception > onError StopAll() Stops all currently active API requests Declaration public void StopAll()"
+  },
+  "api/ColizeumSDK.API.html": {
+    "href": "api/ColizeumSDK.API.html",
+    "title": "Namespace ColizeumSDK.API | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.API Classes ApiRequest A helper class which is used to create a new API request ColizeumAPI"
+  },
+  "api/ColizeumSDK.API.Requests.ConsumeEnergyRequest.html": {
+    "href": "api/ColizeumSDK.API.Requests.ConsumeEnergyRequest.html",
+    "title": "Class ConsumeEnergyRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class ConsumeEnergyRequest A request which will consume the specified amount of energy for the current User Inheritance Object ApiRequest ConsumeEnergyRequest Inherited Members ApiRequest.Uri ApiRequest.Method ApiRequest.Body ApiRequest.FormData ApiRequest.SimpleForm ApiRequest.Headers ApiRequest.Params ApiRequest.UseAuthorization Namespace : ColizeumSDK.API.Requests Assembly : cs.temp.dll.dll Syntax public class ConsumeEnergyRequest : ApiRequest Constructors ConsumeEnergyRequest(Int32, String) Declaration public ConsumeEnergyRequest(int amount, string tokenId = null) Parameters Type Name Description Int32 amount String tokenId"
+  },
+  "api/ColizeumSDK.API.Requests.GetEarningsRequest.html": {
+    "href": "api/ColizeumSDK.API.Requests.GetEarningsRequest.html",
+    "title": "Class GetEarningsRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class GetEarningsRequest Returns secondary currency earnings made in this specific app/game Inheritance Object ApiRequest GetEarningsRequest Inherited Members ApiRequest.Uri ApiRequest.Method ApiRequest.Body ApiRequest.FormData ApiRequest.SimpleForm ApiRequest.Headers ApiRequest.Params ApiRequest.UseAuthorization Namespace : ColizeumSDK.API.Requests Assembly : cs.temp.dll.dll Syntax public class GetEarningsRequest : ApiRequest Constructors GetEarningsRequest() Declaration public GetEarningsRequest()"
+  },
+  "api/ColizeumSDK.API.Requests.GetEnergyRequest.html": {
+    "href": "api/ColizeumSDK.API.Requests.GetEnergyRequest.html",
+    "title": "Class GetEnergyRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class GetEnergyRequest Returns energy information used to build the Energy model Inheritance Object ApiRequest GetEnergyRequest Inherited Members ApiRequest.Uri ApiRequest.Method ApiRequest.Body ApiRequest.FormData ApiRequest.SimpleForm ApiRequest.Headers ApiRequest.Params ApiRequest.UseAuthorization Namespace : ColizeumSDK.API.Requests Assembly : cs.temp.dll.dll Syntax public class GetEnergyRequest : ApiRequest Constructors GetEnergyRequest() Declaration public GetEnergyRequest()"
+  },
+  "api/ColizeumSDK.API.Requests.GetMeRequest.html": {
+    "href": "api/ColizeumSDK.API.Requests.GetMeRequest.html",
+    "title": "Class GetMeRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class GetMeRequest Returns the currently logged in user Inheritance Object ApiRequest GetMeRequest Inherited Members ApiRequest.Uri ApiRequest.Method ApiRequest.Body ApiRequest.FormData ApiRequest.SimpleForm ApiRequest.Headers ApiRequest.Params ApiRequest.UseAuthorization Namespace : ColizeumSDK.API.Requests Assembly : cs.temp.dll.dll Syntax public class GetMeRequest : ApiRequest Constructors GetMeRequest() Declaration public GetMeRequest()"
+  },
+  "api/ColizeumSDK.API.Requests.GetSecondaryCurrencyRequest.html": {
+    "href": "api/ColizeumSDK.API.Requests.GetSecondaryCurrencyRequest.html",
+    "title": "Class GetSecondaryCurrencyRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class GetSecondaryCurrencyRequest Returns information about the available secondary currency the user has Inheritance Object ApiRequest GetSecondaryCurrencyRequest Inherited Members ApiRequest.Uri ApiRequest.Method ApiRequest.Body ApiRequest.FormData ApiRequest.SimpleForm ApiRequest.Headers ApiRequest.Params ApiRequest.UseAuthorization Namespace : ColizeumSDK.API.Requests Assembly : cs.temp.dll.dll Syntax public class GetSecondaryCurrencyRequest : ApiRequest Constructors GetSecondaryCurrencyRequest() Declaration public GetSecondaryCurrencyRequest()"
+  },
+  "api/ColizeumSDK.API.Requests.GetTokenRequest.html": {
+    "href": "api/ColizeumSDK.API.Requests.GetTokenRequest.html",
+    "title": "Class GetTokenRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class GetTokenRequest Used to exchange authorization code for an access token Inheritance Object ApiRequest GetTokenRequest Inherited Members ApiRequest.Uri ApiRequest.Method ApiRequest.Body ApiRequest.FormData ApiRequest.SimpleForm ApiRequest.Headers ApiRequest.Params ApiRequest.UseAuthorization Namespace : ColizeumSDK.API.Requests Assembly : cs.temp.dll.dll Syntax public class GetTokenRequest : ApiRequest Constructors GetTokenRequest(String, String) Declaration public GetTokenRequest(string code, string codeVerifier) Parameters Type Name Description String code String codeVerifier"
+  },
+  "api/ColizeumSDK.API.Requests.html": {
+    "href": "api/ColizeumSDK.API.Requests.html",
+    "title": "Namespace ColizeumSDK.API.Requests | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.API.Requests Classes ConsumeEnergyRequest A request which will consume the specified amount of energy for the current User GetEarningsRequest Returns secondary currency earnings made in this specific app/game GetEnergyRequest Returns energy information used to build the Energy model GetMeRequest Returns the currently logged in user GetSecondaryCurrencyRequest Returns information about the available secondary currency the user has GetTokenRequest Used to exchange authorization code for an access token RefreshAccessTokenRequest Used to retrieve a new access token, using a refresh token RevokeTokenRequest Revokes the specified token from the user, making it unusable"
+  },
+  "api/ColizeumSDK.API.Requests.RefreshAccessTokenRequest.html": {
+    "href": "api/ColizeumSDK.API.Requests.RefreshAccessTokenRequest.html",
+    "title": "Class RefreshAccessTokenRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class RefreshAccessTokenRequest Used to retrieve a new access token, using a refresh token Inheritance Object ApiRequest RefreshAccessTokenRequest Inherited Members ApiRequest.Uri ApiRequest.Method ApiRequest.Body ApiRequest.FormData ApiRequest.SimpleForm ApiRequest.Headers ApiRequest.Params ApiRequest.UseAuthorization Namespace : ColizeumSDK.API.Requests Assembly : cs.temp.dll.dll Syntax public class RefreshAccessTokenRequest : ApiRequest Constructors RefreshAccessTokenRequest(String) Declaration public RefreshAccessTokenRequest(string refreshToken) Parameters Type Name Description String refreshToken"
+  },
+  "api/ColizeumSDK.API.Requests.RevokeTokenRequest.html": {
+    "href": "api/ColizeumSDK.API.Requests.RevokeTokenRequest.html",
+    "title": "Class RevokeTokenRequest | Colizeum Unity SDK API Reference",
+    "keywords": "Class RevokeTokenRequest Revokes the specified token from the user, making it unusable Inheritance Object ApiRequest RevokeTokenRequest Inherited Members ApiRequest.Uri ApiRequest.Method ApiRequest.Body ApiRequest.FormData ApiRequest.SimpleForm ApiRequest.Headers ApiRequest.Params ApiRequest.UseAuthorization Namespace : ColizeumSDK.API.Requests Assembly : cs.temp.dll.dll Syntax public class RevokeTokenRequest : ApiRequest Constructors RevokeTokenRequest(String) Declaration public RevokeTokenRequest(string token) Parameters Type Name Description String token"
+  },
+  "api/ColizeumSDK.API.Responses.CodeResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.CodeResponse.html",
+    "title": "Class CodeResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Class CodeResponse Authorization code response which holds the code and state provided by the Identity Service Inheritance Object CodeResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public class CodeResponse Fields code Declaration public string code Field Value Type Description String state Declaration public string state Field Value Type Description String"
+  },
+  "api/ColizeumSDK.API.Responses.ConsumeEnergyResponse.ConsumeEnergyItem.html": {
+    "href": "api/ColizeumSDK.API.Responses.ConsumeEnergyResponse.ConsumeEnergyItem.html",
+    "title": "Struct ConsumeEnergyResponse.ConsumeEnergyItem | Colizeum Unity SDK API Reference",
+    "keywords": "Struct ConsumeEnergyResponse.ConsumeEnergyItem Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public struct ConsumeEnergyItem Fields energy_reduced Declaration public int energy_reduced Field Value Type Description Int32 remaining_energy Declaration public int remaining_energy Field Value Type Description Int32 request_id Declaration public string request_id Field Value Type Description String"
+  },
+  "api/ColizeumSDK.API.Responses.ConsumeEnergyResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.ConsumeEnergyResponse.html",
+    "title": "Class ConsumeEnergyResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Class ConsumeEnergyResponse Inheritance Object ConsumeEnergyResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public class ConsumeEnergyResponse Fields item Declaration public ConsumeEnergyResponse.ConsumeEnergyItem item Field Value Type Description ConsumeEnergyResponse.ConsumeEnergyItem"
+  },
+  "api/ColizeumSDK.API.Responses.ErrorResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.ErrorResponse.html",
+    "title": "Class ErrorResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Class ErrorResponse A generic error response which will be parsed to an Exception by the SDK Inheritance Object ErrorResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public class ErrorResponse Fields error Declaration public string error Field Value Type Description String error_description Declaration public string error_description Field Value Type Description String error_detail Declaration public string error_detail Field Value Type Description String message Declaration public string message Field Value Type Description String status Declaration public int status Field Value Type Description Int32"
+  },
+  "api/ColizeumSDK.API.Responses.GenericResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.GenericResponse.html",
+    "title": "Class GenericResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Class GenericResponse A generic response used when it's not needed to wait for an actual API response Inheritance Object GenericResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public class GenericResponse"
+  },
+  "api/ColizeumSDK.API.Responses.GetEarningsResponse.EarningsItem.html": {
+    "href": "api/ColizeumSDK.API.Responses.GetEarningsResponse.EarningsItem.html",
+    "title": "Struct GetEarningsResponse.EarningsItem | Colizeum Unity SDK API Reference",
+    "keywords": "Struct GetEarningsResponse.EarningsItem Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public struct EarningsItem Fields client_id Declaration public string client_id Field Value Type Description String total_earnings Declaration public float total_earnings Field Value Type Description Single"
+  },
+  "api/ColizeumSDK.API.Responses.GetEarningsResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.GetEarningsResponse.html",
+    "title": "Class GetEarningsResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Class GetEarningsResponse Inheritance Object GetEarningsResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public class GetEarningsResponse Fields item Declaration public GetEarningsResponse.EarningsItem item Field Value Type Description GetEarningsResponse.EarningsItem"
+  },
+  "api/ColizeumSDK.API.Responses.GetEnergyResponse.EnergyItem.html": {
+    "href": "api/ColizeumSDK.API.Responses.GetEnergyResponse.EnergyItem.html",
+    "title": "Struct GetEnergyResponse.EnergyItem | Colizeum Unity SDK API Reference",
+    "keywords": "Struct GetEnergyResponse.EnergyItem Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public struct EnergyItem Fields max_energy Declaration public int max_energy Field Value Type Description Int32 tokens Declaration public GetEnergyResponse.EnergyToken[] tokens Field Value Type Description GetEnergyResponse.EnergyToken [] total_energy Declaration public int total_energy Field Value Type Description Int32"
+  },
+  "api/ColizeumSDK.API.Responses.GetEnergyResponse.EnergyToken.html": {
+    "href": "api/ColizeumSDK.API.Responses.GetEnergyResponse.EnergyToken.html",
+    "title": "Struct GetEnergyResponse.EnergyToken | Colizeum Unity SDK API Reference",
+    "keywords": "Struct GetEnergyResponse.EnergyToken Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public struct EnergyToken Fields energy Declaration public int energy Field Value Type Description Int32 energy_regeneration_amount Declaration public int energy_regeneration_amount Field Value Type Description Int32 energy_regeneration_rate Declaration public int energy_regeneration_rate Field Value Type Description Int32 max_energy Declaration public int max_energy Field Value Type Description Int32 next_energy_at Declaration public string next_energy_at Field Value Type Description String token_id Declaration public string token_id Field Value Type Description String"
+  },
+  "api/ColizeumSDK.API.Responses.GetEnergyResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.GetEnergyResponse.html",
+    "title": "Struct GetEnergyResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Struct GetEnergyResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public struct GetEnergyResponse Fields item Declaration public GetEnergyResponse.EnergyItem item Field Value Type Description GetEnergyResponse.EnergyItem"
+  },
+  "api/ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse.html",
+    "title": "Class GetSecondaryCurrencyResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Class GetSecondaryCurrencyResponse Inheritance Object GetSecondaryCurrencyResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public class GetSecondaryCurrencyResponse Fields item Declaration public GetSecondaryCurrencyResponse.SecondaryCurrencyItem item Field Value Type Description GetSecondaryCurrencyResponse.SecondaryCurrencyItem"
+  },
+  "api/ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse.SecondaryCurrencyItem.html": {
+    "href": "api/ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse.SecondaryCurrencyItem.html",
+    "title": "Struct GetSecondaryCurrencyResponse.SecondaryCurrencyItem | Colizeum Unity SDK API Reference",
+    "keywords": "Struct GetSecondaryCurrencyResponse.SecondaryCurrencyItem Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public struct SecondaryCurrencyItem Fields total Declaration public float total Field Value Type Description Single"
+  },
+  "api/ColizeumSDK.API.Responses.html": {
+    "href": "api/ColizeumSDK.API.Responses.html",
+    "title": "Namespace ColizeumSDK.API.Responses | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.API.Responses Classes CodeResponse Authorization code response which holds the code and state provided by the Identity Service ConsumeEnergyResponse ErrorResponse A generic error response which will be parsed to an Exception by the SDK GenericResponse A generic response used when it's not needed to wait for an actual API response GetEarningsResponse GetSecondaryCurrencyResponse TokenResponse A token response which is returned when the authorization code is exchanged for an access token or when a refresh token is used to get a new access token UserResponse Structs ConsumeEnergyResponse.ConsumeEnergyItem GetEarningsResponse.EarningsItem GetEnergyResponse GetEnergyResponse.EnergyItem GetEnergyResponse.EnergyToken GetSecondaryCurrencyResponse.SecondaryCurrencyItem UserResponse.UserItem UserResponse.UserWallet"
+  },
+  "api/ColizeumSDK.API.Responses.TokenResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.TokenResponse.html",
+    "title": "Class TokenResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Class TokenResponse A token response which is returned when the authorization code is exchanged for an access token or when a refresh token is used to get a new access token Inheritance Object TokenResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public class TokenResponse Fields access_token Declaration public string access_token Field Value Type Description String expires_in Declaration public int expires_in Field Value Type Description Int32 id_token Declaration public string id_token Field Value Type Description String refresh_token Declaration public string refresh_token Field Value Type Description String scope Declaration public string scope Field Value Type Description String token_type Declaration public string token_type Field Value Type Description String"
+  },
+  "api/ColizeumSDK.API.Responses.UserResponse.html": {
+    "href": "api/ColizeumSDK.API.Responses.UserResponse.html",
+    "title": "Class UserResponse | Colizeum Unity SDK API Reference",
+    "keywords": "Class UserResponse Inheritance Object UserResponse Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public class UserResponse Fields item Declaration public UserResponse.UserItem item Field Value Type Description UserResponse.UserItem"
+  },
+  "api/ColizeumSDK.API.Responses.UserResponse.UserItem.html": {
+    "href": "api/ColizeumSDK.API.Responses.UserResponse.UserItem.html",
+    "title": "Struct UserResponse.UserItem | Colizeum Unity SDK API Reference",
+    "keywords": "Struct UserResponse.UserItem Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public struct UserItem Fields avatar Declaration public string avatar Field Value Type Description String bio Declaration public string bio Field Value Type Description String created_at Declaration public string created_at Field Value Type Description String discord Declaration public string discord Field Value Type Description String email Declaration public string email Field Value Type Description String energy Declaration public EnergyItem energy Field Value Type Description EnergyItem id Declaration public string id Field Value Type Description String secondaryCurrency Declaration public SecondaryCurrencyItem secondaryCurrency Field Value Type Description SecondaryCurrencyItem telegram Declaration public string telegram Field Value Type Description String twitter Declaration public string twitter Field Value Type Description String username Declaration public string username Field Value Type Description String wallets Declaration public UserResponse.UserWallet[] wallets Field Value Type Description UserResponse.UserWallet []"
+  },
+  "api/ColizeumSDK.API.Responses.UserResponse.UserWallet.html": {
+    "href": "api/ColizeumSDK.API.Responses.UserResponse.UserWallet.html",
+    "title": "Struct UserResponse.UserWallet | Colizeum Unity SDK API Reference",
+    "keywords": "Struct UserResponse.UserWallet Namespace : ColizeumSDK.API.Responses Assembly : cs.temp.dll.dll Syntax public struct UserWallet Fields address Declaration public string address Field Value Type Description String id Declaration public string id Field Value Type Description String"
+  },
+  "api/ColizeumSDK.Auth.ColizeumAuth.html": {
+    "href": "api/ColizeumSDK.Auth.ColizeumAuth.html",
+    "title": "Class ColizeumAuth | Colizeum Unity SDK API Reference",
+    "keywords": "Class ColizeumAuth Colizeum Authorization module which allows to integrate \"Login with Colizeum\" functionality easily Inheritance Object ColizeumAuth Namespace : ColizeumSDK.Auth Assembly : cs.temp.dll.dll Syntax public class ColizeumAuth : MonoBehaviour Properties IsLoggedIn Returns a boolean indicating if the user is logged in Declaration public bool IsLoggedIn { get; } Property Value Type Description Boolean Methods GetAuthUrl() Returns the authorization url with the code challenge and state Declaration public string GetAuthUrl() Returns Type Description String URL GetTokensFromCode(String, Action<TokenResponse>, Action<Exception>) Declaration public void GetTokensFromCode(string code, Action<TokenResponse> onSuccess, Action<Exception> onError = null) Parameters Type Name Description String code Action < TokenResponse > onSuccess Action < Exception > onError GetUser(Action<User>, Action<Exception>) Returns the currently logged in user Declaration public void GetUser(Action<User> onSuccess, Action<Exception> onError = null) Parameters Type Name Description Action < User > onSuccess Action < Exception > onError Login(Action<User>, Action<Exception>) Opens the system's internet browser and starts the login flow Declaration public void Login(Action<User> onSuccess, Action<Exception> onError = null) Parameters Type Name Description Action < User > onSuccess Called after a successful login Action < Exception > onError Called when an exception is thrown within the login flow Logout() Destroys the active Colizeum session, removes all in-memory user data and calls the API to revoke access tokens Declaration public void Logout()"
+  },
+  "api/ColizeumSDK.Auth.ColizeumToken.html": {
+    "href": "api/ColizeumSDK.Auth.ColizeumToken.html",
+    "title": "Class ColizeumToken | Colizeum Unity SDK API Reference",
+    "keywords": "Class ColizeumToken A class which holds currently active tokens and manages token encryption in PlayerPrefs Inheritance Object ColizeumToken Namespace : ColizeumSDK.Auth Assembly : cs.temp.dll.dll Syntax public class ColizeumToken : MonoBehaviour Fields OnInvalid An event which is called when the SDK fails to get a new access token, which usually means that the refresh token has expired Declaration public Action OnInvalid Field Value Type Description Action Properties AccessToken Access Token which is used to access data on behalf of the Colizeum user Declaration public string AccessToken { get; } Property Value Type Description String AccessTokenExpiresAt UNIX timestamp which represents when the access token will be invalid Declaration public int AccessTokenExpiresAt { get; } Property Value Type Description Int32 IDToken ID Token that proves that the Colizeum user has been authenticated Declaration public string IDToken { get; } Property Value Type Description String RefreshToken Refresh Token which is used to get a new Access Token Declaration public string RefreshToken { get; } Property Value Type Description String RefreshTokenExpiresAt UNIX timestamp which represents when the refresh token will be invalid Declaration public int RefreshTokenExpiresAt { get; } Property Value Type Description Int32 Methods CanBeRefreshed() Returns a boolean indicating if the access token can be refreshed (assuming it's not revoked server-side) Declaration public bool CanBeRefreshed() Returns Type Description Boolean Create(String, String, String, Int32) Creates a new token instance and stores encrypted data Declaration public void Create(string accessToken, string refreshToken, string idToken, int expiresIn) Parameters Type Name Description String accessToken String refreshToken String idToken Int32 expiresIn Destroy() Destroys the current token instance and also clears the store data Declaration public void Destroy() Exists() Returns a boolean indicating if the access token exists Declaration public bool Exists() Returns Type Description Boolean Boolean IsValid() Returns a boolean indicating if the access token exists and it's valid Declaration public bool IsValid() Returns Type Description Boolean Boolean Refresh(Action, Action<Exception>) Tries to refresh the current access token using the stored refresh token Declaration public void Refresh(Action onSuccess, Action<Exception> onError) Parameters Type Name Description Action onSuccess Action < Exception > onError"
+  },
+  "api/ColizeumSDK.Auth.html": {
+    "href": "api/ColizeumSDK.Auth.html",
+    "title": "Namespace ColizeumSDK.Auth | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.Auth Classes ColizeumAuth Colizeum Authorization module which allows to integrate \"Login with Colizeum\" functionality easily ColizeumToken A class which holds currently active tokens and manages token encryption in PlayerPrefs"
+  },
+  "api/ColizeumSDK.Colizeum.html": {
+    "href": "api/ColizeumSDK.Colizeum.html",
+    "title": "Class Colizeum | Colizeum Unity SDK API Reference",
+    "keywords": "Class Colizeum The central point of the SDK which holds references to all the necessary modules Inheritance Object Colizeum Namespace : ColizeumSDK Assembly : cs.temp.dll.dll Syntax public class Colizeum : MonoBehaviour Properties API Reference the the ColizeumApi module Declaration public static ColizeumAPI API { get; } Property Value Type Description ColizeumAPI See Also ColizeumAPI Auth Reference the the ColizeumAuth module Declaration public static ColizeumAuth Auth { get; } Property Value Type Description ColizeumAuth See Also ColizeumAuth IsInitialized A boolean which represents if the SDK is initialized or not Declaration public static bool IsInitialized { get; } Property Value Type Description Boolean IsLoggedIn Returns a boolean indicating if the user is logged in Declaration public static bool IsLoggedIn { get; } Property Value Type Description Boolean Token Reference to the ColizeumToken class Declaration public static ColizeumToken Token { get; } Property Value Type Description ColizeumToken User Reference to the currently logged in user Declaration public static User User { get; set; } Property Value Type Description User"
+  },
+  "api/ColizeumSDK.Enum.ApiMode.html": {
+    "href": "api/ColizeumSDK.Enum.ApiMode.html",
+    "title": "Enum ApiMode | Colizeum Unity SDK API Reference",
+    "keywords": "Enum ApiMode Namespace : ColizeumSDK.Enum Assembly : cs.temp.dll.dll Syntax public enum ApiMode Fields Name Description Production Sandbox"
+  },
+  "api/ColizeumSDK.Enum.CallbackType.html": {
+    "href": "api/ColizeumSDK.Enum.CallbackType.html",
+    "title": "Enum CallbackType | Colizeum Unity SDK API Reference",
+    "keywords": "Enum CallbackType Namespace : ColizeumSDK.Enum Assembly : cs.temp.dll.dll Syntax public enum CallbackType Fields Name Description DeepLink LoopBack Redirect"
+  },
+  "api/ColizeumSDK.Enum.html": {
+    "href": "api/ColizeumSDK.Enum.html",
+    "title": "Namespace ColizeumSDK.Enum | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.Enum Enums ApiMode CallbackType LogLevel PlatformType"
+  },
+  "api/ColizeumSDK.Enum.LogLevel.html": {
+    "href": "api/ColizeumSDK.Enum.LogLevel.html",
+    "title": "Enum LogLevel | Colizeum Unity SDK API Reference",
+    "keywords": "Enum LogLevel Namespace : ColizeumSDK.Enum Assembly : cs.temp.dll.dll Syntax public enum LogLevel Fields Name Description Error Info Warning"
+  },
+  "api/ColizeumSDK.Enum.PlatformType.html": {
+    "href": "api/ColizeumSDK.Enum.PlatformType.html",
+    "title": "Enum PlatformType | Colizeum Unity SDK API Reference",
+    "keywords": "Enum PlatformType Namespace : ColizeumSDK.Enum Assembly : cs.temp.dll.dll Syntax public enum PlatformType Fields Name Description Android IOS Standalone WebGL"
+  },
+  "api/ColizeumSDK.Exceptions.ApiHttpException.html": {
+    "href": "api/ColizeumSDK.Exceptions.ApiHttpException.html",
+    "title": "Class ApiHttpException | Colizeum Unity SDK API Reference",
+    "keywords": "Class ApiHttpException A generic exception which is thrown when an unknown API error has happened Inheritance Object ApiHttpException Namespace : ColizeumSDK.Exceptions Assembly : cs.temp.dll.dll Syntax public class ApiHttpException : Exception Constructors ApiHttpException() Declaration public ApiHttpException() ApiHttpException(String) Declaration public ApiHttpException(string message) Parameters Type Name Description String message ApiHttpException(String, Exception) Declaration public ApiHttpException(string message, Exception inner) Parameters Type Name Description String message Exception inner"
+  },
+  "api/ColizeumSDK.Exceptions.ApiNetworkException.html": {
+    "href": "api/ColizeumSDK.Exceptions.ApiNetworkException.html",
+    "title": "Class ApiNetworkException | Colizeum Unity SDK API Reference",
+    "keywords": "Class ApiNetworkException An exception which is thrown when calling API methods but the API is unresponsive or the client doesn't have an internet connection Inheritance Object ApiNetworkException Namespace : ColizeumSDK.Exceptions Assembly : cs.temp.dll.dll Syntax public class ApiNetworkException : Exception"
+  },
+  "api/ColizeumSDK.Exceptions.AuthCodeException.html": {
+    "href": "api/ColizeumSDK.Exceptions.AuthCodeException.html",
+    "title": "Class AuthCodeException | Colizeum Unity SDK API Reference",
+    "keywords": "Class AuthCodeException An exception which is thrown when the Identity service declined the authorization request, either when the user aborts the authorization or a different issue happened within the Identity service Inheritance Object AuthCodeException Namespace : ColizeumSDK.Exceptions Assembly : cs.temp.dll.dll Syntax public class AuthCodeException : Exception Constructors AuthCodeException() Declaration public AuthCodeException() AuthCodeException(String) Declaration public AuthCodeException(string message) Parameters Type Name Description String message AuthCodeException(String, Exception) Declaration public AuthCodeException(string message, Exception inner) Parameters Type Name Description String message Exception inner"
+  },
+  "api/ColizeumSDK.Exceptions.html": {
+    "href": "api/ColizeumSDK.Exceptions.html",
+    "title": "Namespace ColizeumSDK.Exceptions | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.Exceptions Classes ApiHttpException A generic exception which is thrown when an unknown API error has happened ApiNetworkException An exception which is thrown when calling API methods but the API is unresponsive or the client doesn't have an internet connection AuthCodeException An exception which is thrown when the Identity service declined the authorization request, either when the user aborts the authorization or a different issue happened within the Identity service InvalidRequestException An exception which is thrown when the provided data to the API was invalid. A detailed error description will be provided in the message InvalidTokenException An exception which is thrown when a token (either access token or refresh token) provided in the request was invalid UnauthorizedException An exception which is usually thrown when an access token isn't provided in the API request"
+  },
+  "api/ColizeumSDK.Exceptions.InvalidRequestException.html": {
+    "href": "api/ColizeumSDK.Exceptions.InvalidRequestException.html",
+    "title": "Class InvalidRequestException | Colizeum Unity SDK API Reference",
+    "keywords": "Class InvalidRequestException An exception which is thrown when the provided data to the API was invalid. A detailed error description will be provided in the message Inheritance Object InvalidRequestException Namespace : ColizeumSDK.Exceptions Assembly : cs.temp.dll.dll Syntax public class InvalidRequestException : Exception Constructors InvalidRequestException() Declaration public InvalidRequestException() InvalidRequestException(String) Declaration public InvalidRequestException(string message) Parameters Type Name Description String message InvalidRequestException(String, Exception) Declaration public InvalidRequestException(string message, Exception inner) Parameters Type Name Description String message Exception inner"
+  },
+  "api/ColizeumSDK.Exceptions.InvalidTokenException.html": {
+    "href": "api/ColizeumSDK.Exceptions.InvalidTokenException.html",
+    "title": "Class InvalidTokenException | Colizeum Unity SDK API Reference",
+    "keywords": "Class InvalidTokenException An exception which is thrown when a token (either access token or refresh token) provided in the request was invalid Inheritance Object InvalidTokenException Namespace : ColizeumSDK.Exceptions Assembly : cs.temp.dll.dll Syntax public class InvalidTokenException : Exception Remarks If an invalid access token caused the exception, the SDK will automatically try to get a new access token using the refresh token Constructors InvalidTokenException() Declaration public InvalidTokenException() InvalidTokenException(String) Declaration public InvalidTokenException(string message) Parameters Type Name Description String message InvalidTokenException(String, Exception) Declaration public InvalidTokenException(string message, Exception inner) Parameters Type Name Description String message Exception inner"
+  },
+  "api/ColizeumSDK.Exceptions.UnauthorizedException.html": {
+    "href": "api/ColizeumSDK.Exceptions.UnauthorizedException.html",
+    "title": "Class UnauthorizedException | Colizeum Unity SDK API Reference",
+    "keywords": "Class UnauthorizedException An exception which is usually thrown when an access token isn't provided in the API request Inheritance Object UnauthorizedException Namespace : ColizeumSDK.Exceptions Assembly : cs.temp.dll.dll Syntax public class UnauthorizedException : Exception Constructors UnauthorizedException() Declaration public UnauthorizedException() UnauthorizedException(String) Declaration public UnauthorizedException(string message) Parameters Type Name Description String message UnauthorizedException(String, Exception) Declaration public UnauthorizedException(string message, Exception inner) Parameters Type Name Description String message Exception inner"
+  },
+  "api/ColizeumSDK.Factories.EnergyFactory.html": {
+    "href": "api/ColizeumSDK.Factories.EnergyFactory.html",
+    "title": "Class EnergyFactory | Colizeum Unity SDK API Reference",
+    "keywords": "Class EnergyFactory Inheritance Object EnergyFactory Namespace : ColizeumSDK.Factories Assembly : cs.temp.dll.dll Syntax public static class EnergyFactory Methods Create(EnergyItem) Declaration public static Energy Create(EnergyItem energyItem) Parameters Type Name Description EnergyItem energyItem Returns Type Description Energy"
+  },
+  "api/ColizeumSDK.Factories.html": {
+    "href": "api/ColizeumSDK.Factories.html",
+    "title": "Namespace ColizeumSDK.Factories | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.Factories Classes EnergyFactory SecondaryCurrencyFactory TokenFactory UserFactory WalletFactory"
+  },
+  "api/ColizeumSDK.Factories.SecondaryCurrencyFactory.html": {
+    "href": "api/ColizeumSDK.Factories.SecondaryCurrencyFactory.html",
+    "title": "Class SecondaryCurrencyFactory | Colizeum Unity SDK API Reference",
+    "keywords": "Class SecondaryCurrencyFactory Inheritance Object SecondaryCurrencyFactory Namespace : ColizeumSDK.Factories Assembly : cs.temp.dll.dll Syntax public static class SecondaryCurrencyFactory Methods Create(SecondaryCurrencyItem) Declaration public static SecondaryCurrency Create(SecondaryCurrencyItem secondaryCurrencyItem) Parameters Type Name Description SecondaryCurrencyItem secondaryCurrencyItem Returns Type Description SecondaryCurrency"
+  },
+  "api/ColizeumSDK.Factories.TokenFactory.html": {
+    "href": "api/ColizeumSDK.Factories.TokenFactory.html",
+    "title": "Class TokenFactory | Colizeum Unity SDK API Reference",
+    "keywords": "Class TokenFactory Inheritance Object TokenFactory Namespace : ColizeumSDK.Factories Assembly : cs.temp.dll.dll Syntax public static class TokenFactory Methods Create(EnergyToken) Declaration public static Token Create(EnergyToken token) Parameters Type Name Description EnergyToken token Returns Type Description Token"
+  },
+  "api/ColizeumSDK.Factories.UserFactory.html": {
+    "href": "api/ColizeumSDK.Factories.UserFactory.html",
+    "title": "Class UserFactory | Colizeum Unity SDK API Reference",
+    "keywords": "Class UserFactory Inheritance Object UserFactory Namespace : ColizeumSDK.Factories Assembly : cs.temp.dll.dll Syntax public static class UserFactory Methods Create(UserItem) Declaration public static User Create(UserItem userItem) Parameters Type Name Description UserItem userItem Returns Type Description User"
+  },
+  "api/ColizeumSDK.Factories.WalletFactory.html": {
+    "href": "api/ColizeumSDK.Factories.WalletFactory.html",
+    "title": "Class WalletFactory | Colizeum Unity SDK API Reference",
+    "keywords": "Class WalletFactory Inheritance Object WalletFactory Namespace : ColizeumSDK.Factories Assembly : cs.temp.dll.dll Syntax public static class WalletFactory Methods Create(UserWallet) Declaration public static Wallet Create(UserWallet wallet) Parameters Type Name Description UserWallet wallet Returns Type Description Wallet"
+  },
+  "api/ColizeumSDK.html": {
+    "href": "api/ColizeumSDK.html",
+    "title": "Namespace ColizeumSDK | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK Classes Colizeum The central point of the SDK which holds references to all the necessary modules"
+  },
+  "api/ColizeumSDK.Models.Energy.html": {
+    "href": "api/ColizeumSDK.Models.Energy.html",
+    "title": "Class Energy | Colizeum Unity SDK API Reference",
+    "keywords": "Class Energy Holds information related to user energy and NFTs Inheritance Object Energy Namespace : ColizeumSDK.Models Assembly : cs.temp.dll.dll Syntax public class Energy Fields current Currently available energy the User has Declaration public int current Field Value Type Description Int32 max Maximum available energy the User has Declaration public int max Field Value Type Description Int32 tokens Declaration public List<Token> tokens Field Value Type Description List < Token > Methods Consume(Int32, String, Action<ConsumeEnergyResponse>, Action<Exception>) Consumes user energy from a specific token (if provided) Declaration public void Consume(int amount, string tokenId = null, Action<ConsumeEnergyResponse> onSuccess = null, Action<Exception> onError = null) Parameters Type Name Description Int32 amount Energy amount that will be consumed String tokenId Token ID from which the energy will be consumed (optional) Action < ConsumeEnergyResponse > onSuccess Action < Exception > onError Refresh(Action) Fetches latest information from the API and updates the model Declaration public void Refresh(Action onSuccess = null) Parameters Type Name Description Action onSuccess"
+  },
+  "api/ColizeumSDK.Models.html": {
+    "href": "api/ColizeumSDK.Models.html",
+    "title": "Namespace ColizeumSDK.Models | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.Models Classes Energy Holds information related to user energy and NFTs SecondaryCurrency Holds information related to users secondary currency Token Holds information related to a specific user token (NFT) User Holds information about the currently logged in Colizeum user Wallet Holds information related to users wallet"
+  },
+  "api/ColizeumSDK.Models.SecondaryCurrency.html": {
+    "href": "api/ColizeumSDK.Models.SecondaryCurrency.html",
+    "title": "Class SecondaryCurrency | Colizeum Unity SDK API Reference",
+    "keywords": "Class SecondaryCurrency Holds information related to users secondary currency Inheritance Object SecondaryCurrency Namespace : ColizeumSDK.Models Assembly : cs.temp.dll.dll Syntax public class SecondaryCurrency Fields total Total amount of Secondary Currency the User has Declaration public float total Field Value Type Description Single Methods Refresh(Action) Fetches latest information from the API and updates the model Declaration public void Refresh(Action onSuccess = null) Parameters Type Name Description Action onSuccess"
+  },
+  "api/ColizeumSDK.Models.Token.html": {
+    "href": "api/ColizeumSDK.Models.Token.html",
+    "title": "Class Token | Colizeum Unity SDK API Reference",
+    "keywords": "Class Token Holds information related to a specific user token (NFT) Inheritance Object Token Namespace : ColizeumSDK.Models Assembly : cs.temp.dll.dll Syntax public class Token Fields energy Energy available to the token Declaration public int energy Field Value Type Description Int32 id ID of the token Declaration public string id Field Value Type Description String maxEnergy Maximum available energy the token can have Declaration public int maxEnergy Field Value Type Description Int32 nextEnergyAt Time when the energy will be regenerated Declaration public string nextEnergyAt Field Value Type Description String regenerationAmount Amount of energy that will be added on regeneration Declaration public int regenerationAmount Field Value Type Description Int32 regenerationRate How often the energy regeneration happens Declaration public int regenerationRate Field Value Type Description Int32"
+  },
+  "api/ColizeumSDK.Models.User.html": {
+    "href": "api/ColizeumSDK.Models.User.html",
+    "title": "Class User | Colizeum Unity SDK API Reference",
+    "keywords": "Class User Holds information about the currently logged in Colizeum user Inheritance Object User Namespace : ColizeumSDK.Models Assembly : cs.temp.dll.dll Syntax public class User Fields avatar Declaration public string avatar Field Value Type Description String bio Declaration public string bio Field Value Type Description String createdAt Declaration public string createdAt Field Value Type Description String discord Declaration public string discord Field Value Type Description String email Declaration public string email Field Value Type Description String energy Declaration public Energy energy Field Value Type Description Energy id Declaration public string id Field Value Type Description String secondaryCurrency Declaration public SecondaryCurrency secondaryCurrency Field Value Type Description SecondaryCurrency telegram Declaration public string telegram Field Value Type Description String twitter Declaration public string twitter Field Value Type Description String username Declaration public string username Field Value Type Description String wallets List of user Wallet models Declaration public List<Wallet> wallets Field Value Type Description List < Wallet > Properties HasAnyNft Boolean which indicates if the user has any NFTs (Tokens) Declaration public bool HasAnyNft { get; } Property Value Type Description Boolean"
+  },
+  "api/ColizeumSDK.Models.Wallet.html": {
+    "href": "api/ColizeumSDK.Models.Wallet.html",
+    "title": "Class Wallet | Colizeum Unity SDK API Reference",
+    "keywords": "Class Wallet Holds information related to users wallet Inheritance Object Wallet Namespace : ColizeumSDK.Models Assembly : cs.temp.dll.dll Syntax public class Wallet Fields address Declaration public string address Field Value Type Description String id Declaration public string id Field Value Type Description String"
+  },
+  "api/ColizeumSDK.Settings.AuthSettings.html": {
+    "href": "api/ColizeumSDK.Settings.AuthSettings.html",
+    "title": "Class AuthSettings | Colizeum Unity SDK API Reference",
+    "keywords": "Class AuthSettings Inheritance Object AuthSettings Namespace : ColizeumSDK.Settings Assembly : cs.temp.dll.dll Syntax public class AuthSettings Fields callbackType Declaration public CallbackType callbackType Field Value Type Description CallbackType clientId Declaration public string clientId Field Value Type Description String enabled Declaration public bool enabled Field Value Type Description Boolean redirectUri Declaration public string redirectUri Field Value Type Description String urlScheme Declaration public string urlScheme Field Value Type Description String Properties ClientId Declaration public string ClientId { get; } Property Value Type Description String RedirectUri Declaration public string RedirectUri { get; } Property Value Type Description String"
+  },
+  "api/ColizeumSDK.Settings.ColizeumSettings.html": {
+    "href": "api/ColizeumSDK.Settings.ColizeumSettings.html",
+    "title": "Class ColizeumSettings | Colizeum Unity SDK API Reference",
+    "keywords": "Class ColizeumSettings Inheritance Object ColizeumSettings Namespace : ColizeumSDK.Settings Assembly : cs.temp.dll.dll Syntax public class ColizeumSettings : ScriptableObject Fields androidAuth Declaration public AuthSettings androidAuth Field Value Type Description AuthSettings apiMode Declaration public ApiMode apiMode Field Value Type Description ApiMode appId Declaration public string appId Field Value Type Description String defaultAuth Declaration public AuthSettings defaultAuth Field Value Type Description AuthSettings iosAuth Declaration public AuthSettings iosAuth Field Value Type Description AuthSettings logLevel Declaration public LogLevel logLevel Field Value Type Description LogLevel standaloneAuth Declaration public AuthSettings standaloneAuth Field Value Type Description AuthSettings webGlAuth Declaration public AuthSettings webGlAuth Field Value Type Description AuthSettings Properties CallbackType Declaration public CallbackType CallbackType { get; } Property Value Type Description CallbackType ClientId Declaration public string ClientId { get; } Property Value Type Description String Instance Declaration public static ColizeumSettings Instance { get; } Property Value Type Description ColizeumSettings RedirectUri Declaration public string RedirectUri { get; } Property Value Type Description String Methods GetSdkPath() Declaration public static string GetSdkPath() Returns Type Description String"
+  },
+  "api/ColizeumSDK.Settings.html": {
+    "href": "api/ColizeumSDK.Settings.html",
+    "title": "Namespace ColizeumSDK.Settings | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.Settings Classes AuthSettings ColizeumSettings"
+  },
+  "api/ColizeumSDK.Utils.Constants.html": {
+    "href": "api/ColizeumSDK.Utils.Constants.html",
+    "title": "Class Constants | Colizeum Unity SDK API Reference",
+    "keywords": "Class Constants Holds values which barely ever change Inheritance Object Constants Namespace : ColizeumSDK.Utils Assembly : cs.temp.dll.dll Syntax public static class Constants Fields AccessTokenExpiresAtPref A PlayerPrefs key under which the access token expiration time will be stored Declaration public const string AccessTokenExpiresAtPref = \"ColizemAccessTokenExpiresAt\" Field Value Type Description String AccessTokenPref A PlayerPrefs key under which the encrypted Access Token will be stored Declaration public const string AccessTokenPref = \"ColizeumAccessToken\" Field Value Type Description String ApiUrl Declaration public const string ApiUrl = \"https://api.colizeum.com\" Field Value Type Description String AuthScopes Declaration public static readonly string[] AuthScopes Field Value Type Description String [] ContentTypeHeader Declaration public const string ContentTypeHeader = \"Content-Type\" Field Value Type Description String DefaultContentType Declaration public const string DefaultContentType = \"application/json\" Field Value Type Description String EncryptionKey A string value which is used to encrypt PlayerPrefs data Declaration public const string EncryptionKey = \"colizeum\" Field Value Type Description String IdTokenPref A PlayerPrefs key under which the encrypted ID Token will be stored Declaration public const string IdTokenPref = \"ColizemIdToken\" Field Value Type Description String Issuer Declaration public const string Issuer = \"https://identity.colizeum.com\" Field Value Type Description String LoopbackPort Declaration public const int LoopbackPort = 50100 Field Value Type Description Int32 LoopbackUrl Declaration public const string LoopbackUrl = \"http://127.0.0.1\" Field Value Type Description String RefreshTokenExpiresAtPref A PlayerPrefs key under which the refresh token expiration time will be stored Declaration public const string RefreshTokenExpiresAtPref = \"ColizemRefreshTokenExpiresAt\" Field Value Type Description String RefreshTokenPref A PlayerPrefs key under which the encrypted Refresh Token will be stored Declaration public const string RefreshTokenPref = \"ColizeumRefreshToken\" Field Value Type Description String"
+  },
+  "api/ColizeumSDK.Utils.Endpoints.html": {
+    "href": "api/ColizeumSDK.Utils.Endpoints.html",
+    "title": "Class Endpoints | Colizeum Unity SDK API Reference",
+    "keywords": "Class Endpoints Inheritance Object Endpoints Namespace : ColizeumSDK.Utils Assembly : cs.temp.dll.dll Syntax public static class Endpoints Fields ConsumeEnergy Declaration public const string ConsumeEnergy = \"https://api.colizeum.com/funds/energy/consume\" Field Value Type Description String GetEarnings Declaration public const string GetEarnings = \"https://api.colizeum.com/funds/earnings\" Field Value Type Description String GetEnergy Declaration public const string GetEnergy = \"https://api.colizeum.com/funds/energy\" Field Value Type Description String GetSecondaryCurrency Declaration public const string GetSecondaryCurrency = \"https://api.colizeum.com/funds/secondary_currency\" Field Value Type Description String RevokeToken Declaration public const string RevokeToken = \"https://identity.colizeum.com/token/revocation\" Field Value Type Description String Token Declaration public const string Token = \"https://identity.colizeum.com/token\" Field Value Type Description String UserInfo Declaration public const string UserInfo = \"https://api.colizeum.com/users/me\" Field Value Type Description String"
+  },
+  "api/ColizeumSDK.Utils.html": {
+    "href": "api/ColizeumSDK.Utils.html",
+    "title": "Namespace ColizeumSDK.Utils | Colizeum Unity SDK API Reference",
+    "keywords": "Namespace ColizeumSDK.Utils Classes Constants Holds values which barely ever change Endpoints"
+  },
+  "manual/coniunctis.html": {
+    "href": "manual/coniunctis.html",
+    "title": "Coniunctis nec qui et lanient monticolae vitae | Colizeum Unity SDK API Reference",
+    "keywords": "Coniunctis nec qui et lanient monticolae vitae Opem ille Lorem markdownum cavis exululat inutile. Illi quem caeli, vola patruo difficili Iuppiter Patraeque, est ardebant ingeniis Troica intus Amore tibi mirantem superfusis, multum. Ut Achilles Et sitim Tibi modo ait temptant crinita daret Pariter in removi offensasque Lenaeo damno terra Phoebes ut damnosa classis ignes templo; tua ulla capillos ultima. Videre percusso plectro templa fuit diva minimum debere, quid nomen Philomela animis. Verbis istis flagrat vulnera inpediique ignes. Gravi filo obvius arte Amphionis Panes emisitque iubet. Latona te timens Latentia ante, eundem meritorum sunto ! Elige in timuit templa ferrea, qui arma ligati stagnum turbant. Fraternaque aeternus, dedisse, naufragus corripiens ranas Amathunta et quod laetior culpa nec semper scorpius fuit vicem corpora ardere. Fallit in artus primordia, fratres per aliis , ipsi manu Asiae quod marmorea . mountain(googleVga, pngIphone); var radcabBitrate = dnsCronRecursion; gui(2); ipImageAix += vle(drm_cisc, horizontal + computer_key); jre(vaporware_adc_multi); Lumina ut tamen praesentia vidistis nymphae auroque Bromumque in portant furorem. Visa init resurgere praevitiat canibus et, dedignata turea, ilia. Pisenore mensura insula aere nec per o gladium causa: Alcidae. Veris sentes pallet, alta melius nostra amborum probant, deam. Iuventae dedimus nitidaque hunc traxisse sermonibus pectine flecti an pateres, hac ore gelidis foret semper. Sithon pelle. Bracchia Hippason videntur fateri hosti: palpitat animo est reliquit anne nam confusaque. Interea rex altis munera quem quae quoque rorant, rauco albescere scopulo moriensque parvo, pectus illa, quadrupedes. Notavit haec. Vertit pars quem Euryte casu usta iterum! Ablatum pectus corripiunt neu humus tamquam; ducens stellarum amore. Pulsisque latet, ad tamen victor fulva Tirynthius posco; qui inque in poena quidem enses !"
+  },
+  "manual/etiam.html": {
+    "href": "manual/etiam.html",
+    "title": "Etiam nantemque exul | Colizeum Unity SDK API Reference",
+    "keywords": "Etiam nantemque exul Cum tulit Lorem markdownum quos stimulosque altos . Putat nubes molle Troiae vero dea; nostraque plurima . Vos de mihi, credidit: salibus et iacuit, volvitur sunt unda fronti deriguisse refert . Sumpsisse viso Nubila nomine. Purpura se o et causa parva ripas, adsonat saevaque; quid modo ambo et venere voveo. Sine et esse, illa tempore, sive tibi roseo, ministerio altos. Trepident medicamine, primasque cum et peregit dapibusque quoslibet hominis quoque insula. Tepentibus ut Cecropios ab turba, est auro ferventi aliter duratos feres differtis Ausoniis potes, non noctis Laertaque iuvenes. Caelumque vestigia Et promissa fila sentiet leges; Phrygiae et levatus ferire? Salutifer coniugis fierent ante fecissent post vultumque ultima, per radios currere; tandem. Fuerat qua, ne foedera reformatus nunc diu dea audet nonne. Ut utinam mitia tenuerunt movent spectans Mavortis nulla ite, somnos exsiccata dixit Aeetias. Binas Trinacriam album ex ipse. Quoque una utraque tardius placetque gerere; mariti sed dare ludunt memorante Delphice corpora. Caret quantum intellegat venis gaudent eurus. Et suos crista; has et ferarum quid audit omine; mea cum praemia quae duris, suspicor. Adflati qui Spiro conata supprimit diemque; ora oblitus ensem alti non quo lacrimis ferunt, ageret Cebrenida rutilis delendaque? Terras lata modus: nec fas, misi utque adpositis Iunonis. Fide vidit, ferox Schoeneia mundi, voce, tellus pariterque pedum, sic Celadon securior corpora partesque posito. Potest faxo unda pendulaque ille rostro, haesit pars: formidine captat, viseret simulaverat! Sequi est peragit flumineae pallent simulatas formae avulsa, imagine undis; formam. Et nec sed adeunt, huic aequa et ignes nec, medere terram. Move ipsum abnuat retemptat retinebat duabus diu Iovi est pluma. Tecum non deducit Pelops Inachus: arcet aliquemque, regia telo. Tollens altore nec semel qui voce Palatinae Apertis et dei duo inquit ; luna secundo, fervida terret. In haec dextra septima Tydides tibi: congelat hospes nativum radice tegumenque membris Hesperio ne Libys, est vocabula siqua. Dumque stet mulces , ut fontem dea atricolor, est pronos, clarissimus poterat cum intrare sidere templi. cut_metadata(whitelistSequenceUnit.thick.of_bezel_cdma( address_suffix_troubleshooting), sram_trojan(4, hdmi_network - 1)); flash.apache -= web_gps_plug; if (offline.dac_bridge(scrollEbookRom, parameter.internal_target_superscalar(2)) < qwerty + 2 - ipvCgiContextual) { certificateIdeAsp = overclocking + app; supplyCard = siteRaster; } Sagitta curvum quoque petisti opibusque proximitas in, illa vestrum, mihi domum nescia flexit sacra in. Magni vive sim crescente causam saxo voluit, mens, quod. Tela ter ulterius similis illos nato refugit ait verbaque nec fatigatum penates iaculatricemque cecidit pinnas, cum. Misso contigit caelo dedissent lumina; nympha ad vobis occidat, malo sacra utrumque cunctos Diomedeos addita. Virgineus autumnos, ait mitissima curru: fuit sed fessi se habebat hactenus Ultor; meus."
+  }
+}

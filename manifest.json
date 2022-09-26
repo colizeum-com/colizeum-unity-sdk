@@ -1,0 +1,932 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://docs.colizeum.com/unity/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://docs.colizeum.com/unity/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "D:/a/colizeum-unity-sdk/colizeum-unity-sdk/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.ApiRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.ApiRequest.html",
+          "hash": "BO1EO84TBJ1inwvJzw+LfX8cTEmX/ggXEkMQU+oQ6/g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.ColizeumAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.ColizeumAPI.html",
+          "hash": "fZvyaMrhdHKCljRj02nkyxsQVqaLmvCAzeFhqBhosJY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.ConsumeEnergyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.ConsumeEnergyRequest.html",
+          "hash": "Ferbv195zDdb4eDVihJnAFwGswbWohF0oRt1GuugNQY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.GetEarningsRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.GetEarningsRequest.html",
+          "hash": "n0KxoeVEebvzll/OG7HhwtMqamWIxA8TVHmHZMl6QtM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.GetEnergyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.GetEnergyRequest.html",
+          "hash": "6b25h25B4kBO7+88slji0J4/Fk7NAOfJIx81ICQgQfU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.GetMeRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.GetMeRequest.html",
+          "hash": "5/uQ99w3w3npfrbS35r6MP2XGdpNUN5IPhgXLddqVM8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.GetSecondaryCurrencyRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.GetSecondaryCurrencyRequest.html",
+          "hash": "JxszbCftNbRXy2Itkat3q+Gfc+tN4tu8Az0shvW+l40="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.GetTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.GetTokenRequest.html",
+          "hash": "l0gGXs7tNw+8hc3vp2/rVq2QbOscuug1dH9MmDZ7M2A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.RefreshAccessTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.RefreshAccessTokenRequest.html",
+          "hash": "NdTZ9Si7F5CemnQnI3aWo0fmdOPDiSy7OU6VYtI814E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.RevokeTokenRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.RevokeTokenRequest.html",
+          "hash": "d/56tBLkwPNnW6sODR8GS9mJRfE2cJ9TuAQMx2P2FCo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Requests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Requests.html",
+          "hash": "y3lWpKuW/QS8BLAh7ec0zcYGtJCGzSPShP2Gva98XoE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.CodeResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.CodeResponse.html",
+          "hash": "DPhSl+3TiJEF2DUGN4BxYzVM7MSaakdiKQYp9ZJquV4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.ConsumeEnergyResponse.ConsumeEnergyItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.ConsumeEnergyResponse.ConsumeEnergyItem.html",
+          "hash": "7pxSUKUkFz6m97GiAXWoQHontnKxIRgy4t7XbdDbzO0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.ConsumeEnergyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.ConsumeEnergyResponse.html",
+          "hash": "MKn0ViTpujR/DE6prXCKT6ESPI88w7E7k7MbZ4Iuum8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.ErrorResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.ErrorResponse.html",
+          "hash": "mCys/1FG6yCu67PXP5gyWwi9C07mT1iCF/zOS1Qg2Eo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.GenericResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.GenericResponse.html",
+          "hash": "hWw3hpygXoOpsSxU34puVebCt7IIuqNL7FcRxL9Kjow="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.GetEarningsResponse.EarningsItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.GetEarningsResponse.EarningsItem.html",
+          "hash": "WUPrMOQeRy9GSM21Rv6FN/OrM2sP560Q0BeOIaZkoGY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.GetEarningsResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.GetEarningsResponse.html",
+          "hash": "7rJoDA4Uj8PSxW+gFtm8H4W4lQ8Vned/x0kNvdU9Q4k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.GetEnergyResponse.EnergyItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.GetEnergyResponse.EnergyItem.html",
+          "hash": "AOKt7XqlD8sTKWg9PfNveLCZQXwXSDZ+36IzyMm54tE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.GetEnergyResponse.EnergyToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.GetEnergyResponse.EnergyToken.html",
+          "hash": "3NZf22a7q6QlJs7/IS0203xmDn21ehN6xUS5DfIBsVk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.GetEnergyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.GetEnergyResponse.html",
+          "hash": "QOOsHTPsgbcVRtJot6tX/Oj3JztljZ6uZvixuLooKSA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse.SecondaryCurrencyItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse.SecondaryCurrencyItem.html",
+          "hash": "66WlSah15tZSSG95yqO0soWuJlqmKrUXjw6foXVPKIg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.GetSecondaryCurrencyResponse.html",
+          "hash": "fyvfx2T+MXSexEw1aAxv1EP3jGFREEyg94cstvGT7cQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.TokenResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.TokenResponse.html",
+          "hash": "kbcg6NE/NTPRrzUH8GiwICoOsb2BwfXg09xMQgwNrJI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.UserResponse.UserItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.UserResponse.UserItem.html",
+          "hash": "3ZnYIRCyaJ7xegnCvkEpTmho+hP5sPUlNv+fWziMU1k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.UserResponse.UserWallet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.UserResponse.UserWallet.html",
+          "hash": "x/9DJPypXdhvXvKWMZaet4QVk6AkjCqhoahxrIE3SAY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.UserResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.UserResponse.html",
+          "hash": "OCuwT3N9UklhOIgDVMbpn+z4tcnkYOvVL1b4dIsnBkc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.Responses.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.Responses.html",
+          "hash": "+engnaAViOKix6lD5aBrIQnPM63N4w9RH/NSfhWTmaI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.API.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.API.html",
+          "hash": "vfPhfFcDdGH7RhCHO9jTMUBSSwUU5LfRxonxd1G0AxU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Auth.ColizeumAuth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Auth.ColizeumAuth.html",
+          "hash": "tH8LgQ3UWSuuy8P+HqAmRmiLTMB6vCwDFzZmNEtIsDc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Auth.ColizeumToken.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Auth.ColizeumToken.html",
+          "hash": "ydVzNZJvGT0rzQSG6OwdtvCePQETUBFMrcJXj1wyZxo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Auth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Auth.html",
+          "hash": "Hl4WXzONdPNOFOiL+oZ2nBaUXyvvgTZHXw8OzPs3WJQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Colizeum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Colizeum.html",
+          "hash": "eGM0KpgKYiiol5TS0hZRzEcH57P3tQhuap5qvEwPXX4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Enum.ApiMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Enum.ApiMode.html",
+          "hash": "dm+GLpTg+Fq7Rov7Izd8LWnVgMccHUuKBVj574K2xx8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Enum.CallbackType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Enum.CallbackType.html",
+          "hash": "hCsRElKx8fxE6k8oHOdVsFB1YBINJpnspKnNbRac1DE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Enum.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Enum.LogLevel.html",
+          "hash": "VeymbglKO3yQWQ17qUdcQUFJnXKp3VAicYE2pQZiX9g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Enum.PlatformType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Enum.PlatformType.html",
+          "hash": "Wjoeo9r2SLAYKKUnobn72xV8Zpo+GPtun2lKBryscts="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Enum.html",
+          "hash": "Y7gcNiaJ582DJpWf8KL2Pm2mZNb8FdP5le4spOw0xZA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Exceptions.ApiHttpException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Exceptions.ApiHttpException.html",
+          "hash": "j5yOqOVnl5gi3Cz6/FpbmhNmB4woBiubRu/LKvVF9kI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Exceptions.ApiNetworkException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Exceptions.ApiNetworkException.html",
+          "hash": "rNjdisb+WA5bZnescjmV+n87NLvMAPkA20OHaswAVrU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Exceptions.AuthCodeException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Exceptions.AuthCodeException.html",
+          "hash": "ZxJc07LJXx9vtw/4PrcGncf0MBUXpamPP+5UAbtd0OY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Exceptions.InvalidRequestException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Exceptions.InvalidRequestException.html",
+          "hash": "sArw75a6Divo5kV3zcNc616KJmLSrZto2eaXZULvEDM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Exceptions.InvalidTokenException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Exceptions.InvalidTokenException.html",
+          "hash": "ij+ITOdbgc4b4CgrMczeB1FBocNI8h53wdofONUzZs8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Exceptions.UnauthorizedException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Exceptions.UnauthorizedException.html",
+          "hash": "XyGYyUS4ElFuKZ9+Mwr2hcKu76+m6cvI0FDp2S6AMio="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Exceptions.html",
+          "hash": "orqwo2fnitWcgTmcG/1YuqCQJB4okGsao+2nhm/Wddw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Factories.EnergyFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Factories.EnergyFactory.html",
+          "hash": "br/lUAWWbBfpoQcpAUzBSYIoBhfLHG4KoiDvoTkqiyA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Factories.SecondaryCurrencyFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Factories.SecondaryCurrencyFactory.html",
+          "hash": "8oitt64V1jP7jMyOo/Ii17UU/Oqmbe1pIfV0MS9z3Zw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Factories.TokenFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Factories.TokenFactory.html",
+          "hash": "KdhnYRDRRUdDGmSLTEEdg5qBSDCh1CldWaTLACiDouQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Factories.UserFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Factories.UserFactory.html",
+          "hash": "+P+48RZQHmrHs7vxGlKbr2QRP0HevoVAAq0LsceZbho="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Factories.WalletFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Factories.WalletFactory.html",
+          "hash": "vo3PgzuWF7jyz3Lp1dkeG7UYaItax+4loiewxi7QEvU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Factories.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Factories.html",
+          "hash": "bhhjm2CiY4yrWFshkAD9XgFl/xiOPwn8mviYg7r7O/Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Models.Energy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Models.Energy.html",
+          "hash": "A+qIutEUKqUw0QcCYpXnZDY+Bj1Brotp2aq0fCO0XZI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Models.SecondaryCurrency.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Models.SecondaryCurrency.html",
+          "hash": "tk97yovhsVS2NFV1phzupqMmCdRgINwsaVLYDXnVDyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Models.Token.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Models.Token.html",
+          "hash": "KiPR7n4wMxvjnx/eVHXShdB+vby0UcCPG0jlICPBNEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Models.User.html",
+          "hash": "i0xiYfZiqq2+sWyFT9ORnic2PdhVKWx2tcJd9NTdKvg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Models.Wallet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Models.Wallet.html",
+          "hash": "8/3Eb5vMLWBfMyc287sUEH2IpH2j0VAHcoReyDw+GP4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Models.html",
+          "hash": "IZgXqVfuiuz3RwqUILh9frzlujH6I1+l48gcKZawehs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Settings.AuthSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Settings.AuthSettings.html",
+          "hash": "a5/UAyHhmzcwRDFB51ropcOoTSi2BErBI3ABBw9K+fo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Settings.ColizeumSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Settings.ColizeumSettings.html",
+          "hash": "+MZmodqKttDHArQFttb8+ERtEOc1wJl9RUrrmzazwgM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Settings.html",
+          "hash": "2qLL8KD/HcZIsdCxsGEIGlm+EcHhia+nyv2M3NdPAvU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Utils.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Utils.Constants.html",
+          "hash": "tw0iWI/NR1TbaNQrrY9HODHPRqACTY8AyC2nv2dFn8I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Utils.Endpoints.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Utils.Endpoints.html",
+          "hash": "Kujh36NhUAgTsPEjsDOjsSjielLqqD98/Ue2dObj22A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.Utils.html",
+          "hash": "O8UijFL8jD8UM2rc+AxQ6matMkNQAaBbfwZ9da+H3Wk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ColizeumSDK.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ColizeumSDK.html",
+          "hash": "sCOkZJd8Y+jC2X7ISVVSPzrXRWVXbPNXxXDpMSM2x+0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "uctBTrbA6pcovR051xfRiz6x7QIOlQ2xfcqAVUFQfMw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "favicon.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/coniunctis.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/coniunctis.html",
+          "hash": "B1AgL21py6oFALZVR+N8pOc0loc89Rr0S+xKJ9ds6Z8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/etiam.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/etiam.html",
+          "hash": "CaqBXUGYZZiprZNVhVu0pmamCUeTFMAhZt3tkx5/bLo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "rP+c9KPLMLO+q5u7rC7ci/iMYXqbmZC8g5PeGCEXGU4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "AZtt+tYdIDOVQv8IuSvBY6JPFm21w8m99/tiz+gIhMA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 64,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
